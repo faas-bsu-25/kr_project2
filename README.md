@@ -36,28 +36,28 @@
     <img
         src="https://img.itch.zone/aW1nLzE1MzE3ODYxLmdpZg==/original/R9Cmel.gif"
         alt='"Super Gameboy Quest - Dungeons pack" by Toadzillart on itch.io'
-        height="200px"
+        height="160px"
     />
 </a>
 <a href="https://toadzillart.itch.io/Monsters-pack" target="_blank">
     <img
         src="https://img.itch.zone/aW1nLzE1MzE3ODc0LmdpZg==/original/ZywAS6.gif"
         alt='"Super Gameboy Quest - Enemies pack" by Toadzillart on itch.io'
-        height="200px"
+        height="160px"
     />
 </a>
 <a href="https://toadzillart.itch.io/ui-pack" target="_blank">
     <img
         src="https://img.itch.zone/aW1nLzE1MzE3ODgwLmdpZg==/original/KsyOhU.gif"
         alt='"Super Gameboy Quest - UI pack" by Toadzillart on itch.io'
-        height="200px"
+        height="160px"
     />
 </a>
 <a href="https://pixel-boy.itch.io/icon-godot-node" target="_blank">
     <img
         src="https://img.itch.zone/aW1nLzE3MTM0MjcwLnBuZw==/315x250%23c/er89Ot.png"
         alt='"Icon Node For Godot" by pixel-boy on itch.io'
-        height="200px"
+        height="160px"
     />
 </a>
 
