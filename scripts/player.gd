@@ -8,7 +8,7 @@ enum State {
 	WALK,
 	#HIT,
 	#DEFEATED,
-	#TELEPORT,
+	#FALL,
 	#END,
 }
 
