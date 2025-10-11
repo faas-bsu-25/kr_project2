@@ -60,3 +60,50 @@
         height="200px"
     />
 </a>
+
+<h2>Useful Links</h2>
+<nav>
+    <li>
+        <a
+            href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html#how-to-use-static-typing"
+            target="_blank"
+            >Static typing in GDScript</a
+        >
+    </li>
+    <li>
+        <a
+            href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html"
+            target="_blank"
+            >GDScript style guide</a
+        >
+    </li>
+    <li>
+        <a
+            href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+            target="_blank"
+            >GDScript reference</a
+        >
+    </li>
+    <li>
+        <a href="https://docs.godotengine.org/en/latest/tutorials/animation/animation_tree.html" target="_blank"
+            >Using AnimationTree</a
+        >
+    </li>
+    <li>
+        <a
+            href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html"
+            target="_blank"
+            >GDScript style guide</a
+        >
+    </li>
+    <li>
+        <a
+            href="https://github.com/godotengine/godot-docs-user-notes/discussions/5#discussioncomment-8124099"
+            target="_blank"
+            >SignalBus comment thread</a
+        >
+    </li>
+</nav>
+
+<h2>Error Documentation Journal</h2>
+<sup><i>may they happen now so that they never happen again.</i></sup>
