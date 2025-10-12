@@ -121,7 +121,8 @@
 
 <h2>Error Documentation Journal</h2>
 <sup><i>may they happen now so that they never happen again.</i></sup>
-### This is so complicated (10/11)
+
+<h3>This is so complicated (10/11)</h3>
 <p>Usually when I crack open some code for an assignment
 --or even for a lab in here--
 I can breeze through it without much trouble.</p>
@@ -131,7 +132,7 @@ It's so hard to find a good wayto write this code.
 I was about to make subclasses of a PickupItem where the scripts only contained class names.
 How on earth did my line of reasoning get to <i>that?</i></p>
 
-### Tool Script MEGA troubles
+<h3>Tool Script MEGA troubles (also 10/11)</h3>
 <p>Dr. Faas, if you're reading this, you might remember my 
 <a href="https://discord.com/channels/829049561867485203/829049561867485206/1426747719883690065">spiel</a> 
 on Discord.</p>
