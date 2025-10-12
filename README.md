@@ -114,6 +114,26 @@
       target="_blank"
       >SignalBus comment thread</a
     >
+  <li>
+    <a
+      href="https://docs.godotengine.org/en/stable/tutorials/plugins/running_code_in_the_editor.html"
+      target="_blank"
+      >Running code in the editor</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html"
+      target="_blank"
+      >GDScript exported properties</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://docs.godotengine.org/en/stable/classes/class_callable.html#class-callable-method-call-deferred"
+      target="_blank"
+      ><code>Callable.call_deferred(...args)</code></a
+    >
   </li>
   <br />
   <li><a href="https://palcehold.co">Placehold</a> (used for colors)</li>
