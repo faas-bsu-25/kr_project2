@@ -16,8 +16,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 [autoload]
 
-Sounds="*res://components/sounds_singleton.tscn"
-Signals="*res://components/signals_singleton.tscn"
+PickupEventBus="*res://components/pickup_event_bus.tscn"
 
 [debug]
 

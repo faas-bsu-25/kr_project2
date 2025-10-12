@@ -1,9 +1,9 @@
-@icon("res://assets/node-icons/icon_gem.png")
+@icon("res://assets/node-icons/icon_gem-node2D.png")
 @tool
 class_name Pickup
 extends Area2D
 
-enum ItemType {
+enum Type {
 	BEAN,
 	BOMB,
 	COIN,
@@ -14,37 +14,36 @@ enum ItemType {
 	POTION,
 }
 
-@export var pickup_type: ItemType = ItemType.BEAN:
+@export var pickup_type: Type = Type.BEAN:
 	set(new_type):
 		pickup_type = new_type
 		
-		var tool_change_name: Callable = func(type: ItemType) -> void:
-			var tool_sprite: AnimatedSprite2D = self.get_child(1) as AnimatedSprite2D
-			tool_sprite.animation = _tool_anim_from_type(type)
+		var _tool_change_name: Callable = func(type: Type) -> void:
+			Sprite.animation = _tool_anim_from_type(type)
 		
-		tool_change_name.call_deferred(new_type)
+		_tool_change_name.call_deferred(new_type)
 
 @onready var Shape: CollisionShape2D = $Shape
 @onready var Sprite: AnimatedSprite2D = $Sprite
 
 
-static func _tool_anim_from_type(type: ItemType) -> StringName:
+static func _tool_anim_from_type(type: Type) -> StringName:
 	match (type):
-		ItemType.BEAN:
+		Type.BEAN:
 			return &"bean"
-		ItemType.BOMB:
+		Type.BOMB:
 			return &"bomb"
-		ItemType.COIN:
+		Type.COIN:
 			return &"coin"
-		ItemType.HALF_HEART:
+		Type.HALF_HEART:
 			return &"half_heart"
-		ItemType.HEART:
+		Type.HEART:
 			return &"heart"
-		ItemType.INGOT:
+		Type.INGOT:
 			return &"ingot"
-		ItemType.KEY:
+		Type.KEY:
 			return &"key"
-		ItemType.POTION:
+		Type.POTION:
 			return &"potion"
 		
 		_:
@@ -58,5 +57,5 @@ func _ready() -> void:
 
 func _on_picked_up(body: Node2D) -> void:
 	if body is Player:
-		Signals.item_picked_up.emit(Sprite.animation)
+		PickupEventBus.picked_up.emit(self.pickup_type)
 		self.queue_free()

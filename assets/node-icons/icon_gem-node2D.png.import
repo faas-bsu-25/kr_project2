@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boywuysgwarok"
-path="res://.godot/imported/icon_gem.png-7f3f68464e5b700aad68e5cbbd50cd26.ctex"
+uid="uid://rbd74i080dmq"
+path="res://.godot/imported/icon_gem-node2D.png-1913b7336194250b69029b6b04e9d7f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/node-icons/icon_gem.png"
-dest_files=["res://.godot/imported/icon_gem.png-7f3f68464e5b700aad68e5cbbd50cd26.ctex"]
+source_file="res://assets/node-icons/icon_gem-node2D.png"
+dest_files=["res://.godot/imported/icon_gem-node2D.png-1913b7336194250b69029b6b04e9d7f1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bervew723rm35"
-path="res://.godot/imported/icon_gear.png-b1d044f13f00ae5f34e5e1cf4f6110f8.ctex"
+uid="uid://dp10grpei6f6t"
+path="res://.godot/imported/icon_gem-node.png-e236d662c5fe636ea8122052ea4addab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/node-icons/icon_gear.png"
-dest_files=["res://.godot/imported/icon_gear.png-b1d044f13f00ae5f34e5e1cf4f6110f8.ctex"]
+source_file="res://assets/node-icons/icon_gem-node.png"
+dest_files=["res://.godot/imported/icon_gem-node.png-e236d662c5fe636ea8122052ea4addab.ctex"]
 
 [params]
 

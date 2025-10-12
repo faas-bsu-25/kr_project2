@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://nxsu2hukia88"]
+
+[ext_resource type="Script" uid="uid://bw4kumm3dc07n" path="res://scripts/pickup_event_bus.gd" id="1_y7s3s"]
+[ext_resource type="AudioStream" uid="uid://dlfej1crvjuva" path="res://assets/custom/pickup_key.wav" id="2_pmlrh"]
+[ext_resource type="AudioStream" uid="uid://b8ycsgp16vs7a" path="res://assets/custom/pickup_heart.wav" id="3_cn7be"]
+[ext_resource type="AudioStream" uid="uid://dq2201gss8uij" path="res://assets/custom/pickup_generic.wav" id="4_xk28j"]
+
+[node name="PickupEventBus" type="Node"]
+script = ExtResource("1_y7s3s")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="KeySound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("2_pmlrh")
+
+[node name="HeartSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("3_cn7be")
+
+[node name="GenericSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_xk28j")
