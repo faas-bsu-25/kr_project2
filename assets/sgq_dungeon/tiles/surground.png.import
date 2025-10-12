@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4vtm0c1yj4i1"
-path="res://.godot/imported/grounds.png-c2a6508eb11723f7b78f672205063e3b.ctex"
+uid="uid://datvfgtm32kir"
+path="res://.godot/imported/surground.png-e8794fb48add94e07e9ff8274169b847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/grounds.png"
-dest_files=["res://.godot/imported/grounds.png-c2a6508eb11723f7b78f672205063e3b.ctex"]
+source_file="res://assets/sgq_dungeon/tiles/surground.png"
+dest_files=["res://.godot/imported/surground.png-e8794fb48add94e07e9ff8274169b847.ctex"]
 
 [params]
 

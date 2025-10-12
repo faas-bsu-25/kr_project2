@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://datvfgtm32kir"
-path="res://.godot/imported/surground.png-a014c5b6385380ae4db87aa773d8d22e.ctex"
+uid="uid://cpnf2ml3il4e4"
+path="res://.godot/imported/minecart_and_rails.png-6d855e2bf4aa94a50fd98fbe52fff508.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/surground.png"
-dest_files=["res://.godot/imported/surground.png-a014c5b6385380ae4db87aa773d8d22e.ctex"]
+source_file="res://assets/sgq_dungeon/tiles/minecart_and_rails.png"
+dest_files=["res://.godot/imported/minecart_and_rails.png-6d855e2bf4aa94a50fd98fbe52fff508.ctex"]
 
 [params]
 

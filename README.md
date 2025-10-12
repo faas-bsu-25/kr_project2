@@ -121,25 +121,39 @@
 
 <h2>Error Documentation Journal</h2>
 <sup><i>may they happen now so that they never happen again.</i></sup>
+### This is so complicated (10/11)
+<p>Usually when I crack open some code for an assignment
+--or even for a lab in here--
+I can breeze through it without much trouble.</p>
+
+<p>But trying to make a whole game like this? 
+It's so hard to find a good wayto write this code. 
+I was about to make subclasses of a PickupItem where the scripts only contained class names.
+How on earth did my line of reasoning get to <i>that?</i></p>
+
+### Tool Script MEGA troubles
+<p>Dr. Faas, if you're reading this, you might remember my 
+<a href="https://discord.com/channels/829049561867485203/829049561867485206/1426747719883690065">spiel</a> 
+on Discord.</p>
 
 <h2>Notes</h2>
 <h3>Color Palette</h3>
 <p>The Super Gameboy Quest assets feature the following 2-bit color palette:</p>
 <ul>
   <li>
-    <img src="https://placehold.co/15x15/d4d29b/d4d29b.png" alt="" />
-    <code>#d4d29b</code>
+	<img src="https://placehold.co/15x15/d4d29b/d4d29b.png" alt="" />
+	<code>#d4d29b</code>
   </li>
   <li>
-    <img src="https://placehold.co/15x15/78a46a/78a46a.png" alt="" />
-    <code>#78a46a</code>
+	<img src="https://placehold.co/15x15/78a46a/78a46a.png" alt="" />
+	<code>#78a46a</code>
   </li>
   <li>
-    <img src="https://placehold.co/15x15/5e8549/5e8549.png" alt="" />
-    <code>#5e8549</code>
+	<img src="https://placehold.co/15x15/5e8549/5e8549.png" alt="" />
+	<code>#5e8549</code>
   </li>
   <li>
-    <img src="https://placehold.co/15x15/584422/584422.png" alt="" />
-    <code>#584422</code>
+	<img src="https://placehold.co/15x15/584422/584422.png" alt="" />
+	<code>#584422</code>
   </li>
 </ul>

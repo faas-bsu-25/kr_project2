@@ -12,7 +12,7 @@ enum State {
 	#END,
 }
 
-const MOVE_SPEED: float = 5000.0
+const MOVE_SPEED: float = 8000.0
 @export var state: State = State.IDLE
 var flipped: bool = false
 @onready var Sprite: Sprite2D = $Sprite

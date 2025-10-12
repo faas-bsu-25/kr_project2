@@ -14,12 +14,15 @@ config/name="kr_project2"
 run/main_scene="uid://c1f5w3ipn1sxv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[autoload]
+
+Sounds="*res://components/sounds_singleton.tscn"
+Signals="*res://components/signals_singleton.tscn"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=1
 gdscript/warnings/inferred_declaration=1
-gdscript/warnings/unsafe_property_access=1
-gdscript/warnings/unsafe_method_access=1
 gdscript/warnings/unsafe_cast=1
 gdscript/warnings/unsafe_call_argument=1
 
@@ -53,3 +56,4 @@ move_right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.34509805, 0.26666668, 0.13333334, 1)

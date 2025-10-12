@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://blqmiaat7hryk"]
+
+[ext_resource type="Script" uid="uid://c4lq3yaof04by" path="res://scripts/pickup.gd" id="1_1ftq6"]
+[ext_resource type="SpriteFrames" uid="uid://cqnf88l3j7kct" path="res://resources/pickup_items_animated.tres" id="1_8j826"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ftq6"]
+
+[node name="Pickup" type="Area2D"]
+script = ExtResource("1_1ftq6")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_1ftq6")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("1_8j826")
+animation = &"bean"
+autoplay = "bean"
