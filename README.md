@@ -73,7 +73,7 @@
 
 <h2>Useful Links</h2>
 <nav>
-  <h3>Godot/GDScript</h3>
+  <h3>Godot Docs</h3>
   <ul>
     <li>
       <a
@@ -124,10 +124,34 @@
         >Singletons (Autoload)</a
       >
     </li>
+    <li>
+      <a
+        href="https://docs.godotengine.org/en/stable/tutorials/plugins/running_code_in_the_editor.html"
+        target="_blank"
+        >Running code in the editor</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html"
+        target="_blank"
+        >GDScript exported properties</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://docs.godotengine.org/en/stable/classes/class_callable.html#class-callable-method-call-deferred"
+        target="_blank"
+        ><code>Callable.call_deferred(...args)</code></a
+      >
+    </li>
   </ul>
   <h3>Other Sites</h3>
   <ul>
-    <li><a href="https://palcehold.co">Placehold</a> (used for colors)</li>
+    <li>
+      <a href="https://placehold.co">Placehold</a> (used for color previews
+      below)
+    </li>
   </ul>
 </nav>
 
