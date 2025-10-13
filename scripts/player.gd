@@ -39,6 +39,7 @@ func _physics_process(delta: float) -> void:
 		self.velocity = Vector2.ZERO
 	else:
 		self.velocity = move_dir * _MOVE_SPEED * delta
+		## bug: if stationary, angle always set to Vector2.RIGHT.angle()
 		_last_move_dir = move_dir if state == State.WALKING else _last_move_dir
 	
 	move_and_slide()

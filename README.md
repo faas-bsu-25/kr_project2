@@ -158,64 +158,80 @@
 <h2>Error Documentation Journal</h2>
 <sup><i>may they happen now so that they never happen again.</i></sup>
 
-<h3>This is so complicated (10/11)</h3>
-<p>
-  Usually when I crack open some code for an assignment--or even for a lab in
-  here--I can breeze through it without much trouble.
-</p>
+<details>
+  <summary>
+    <h3>This is so complicated (10/11)</h3>
+  </summary>
+  <p>
+    Usually when I crack open some code for an assignment--or even for a lab in
+    here--I can breeze through it without much trouble.
+  </p>
 
-<p>
-  But trying to make a whole game like this? It's so hard to find a good way to
-  write this code. I was about to make subclasses of a
-  <code>PickupItem</code> where the scripts only contained class names. How on
-  earth did my line of reasoning get to <i>that?</i>
-</p>
+  <p>
+    But trying to make a whole game like this? It's so hard to find a good way
+    to write this code. I was about to make subclasses of a
+    <code>PickupItem</code> where the scripts only contained class names. How on
+    earth did my line of reasoning get to <i>that?</i>
+  </p>
+</details>
 
-<h3>Tool Script MEGA troubles (also 10/11)</h3>
-<p>
-  Dr. Faas, if you're reading this, you might remember my
-  <a
-    href="https://discord.com/channels/829049561867485203/829049561867485206/1426747719883690065"
-    >spiel</a
-  >
-  on Discord.
-</p>
+<details>
+  <summary>
+    <h3>Tool Script MEGA troubles (also 10/11)</h3>
+  </summary>
+  <p>
+    Dr. Faas, if you're reading this, you might remember my
+    <a
+      href="https://discord.com/channels/829049561867485203/829049561867485206/1426747719883690065"
+      >spiel</a
+    >
+    on Discord.
+  </p>
+</details>
 
-<h3>Singletons, "Managers", and event scope (10/12)</h3>
-<p>
-  I spent a lot of time figuring out how I wanted to approach the singleton
-  pattern for this game. Godot features a built-in singleton system via "Project
-  Settings > Globals" aka "Autoload"
-</p>
-<p>
-  I went back and forth on whether to make each specialized singleton a child
-  node of a higher-level GameManager class. Ultimately I decided against it.
-  While asking the BSU Game Dev Discord server about putting all signals in one
-  file or putting related signals into each manager. Manager. Dr. Gestwicki was
-  kind enough to
-  <a
-    href="https://discord.com/channels/829049561867485203/829049561867485206/1426997915569623140"
-    target="_blank"
-    >point out</a
-  >
-  that the word "Manager" is meaningless. He offered, "The name 'manager' means
-  'I don't know what this does :)" Ánd, he's right. This prompted me to rename
-  my singletons. Exit, <code>PickupManager</code>. Enter,
-  <code>PickupEventBus</code>. ✨
-</p>
+<details>
+  <summary>
+    <h3>Singletons, "Managers", and event scope (10/12)</h3>
+  </summary>
+  <p>
+    I spent a lot of time figuring out how I wanted to approach the singleton
+    pattern for this game. Godot features a built-in singleton system via
+    "Project Settings > Globals" aka "Autoload"
+  </p>
+  <p>
+    I went back and forth on whether to make each specialized singleton a child
+    node of a higher-level GameManager class. Ultimately I decided against it.
+    While asking the BSU Game Dev Discord server about putting all signals in
+    one file or putting related signals into each manager. Manager. Dr.
+    Gestwicki was kind enough to
+    <a
+      href="https://discord.com/channels/829049561867485203/829049561867485206/1426997915569623140"
+      target="_blank"
+      >point out</a
+    >
+    that the word "Manager" is meaningless. He offered, "The name 'manager'
+    means 'I don't know what this does :)" Ánd, he's right. This prompted me to
+    rename my singletons. Exit, <code>PickupManager</code>. Enter,
+    <code>PickupEventBus</code>. ✨
+  </p>
+</details>
 
-<h3>Sword aiming issues (also 10/12)</h3>
-<p>
-  I wasn't very good at trig. So. Radians threw me for a loop even when
-  converting to/from degrees. I tried multiple times for the sword to swing at
-  an angle perpendicular to the mouse position, but it was horribly
-  inconsistent.
-</p>
-<p>
-  I eventually decided for the sword to swing in the last axis movement
-  direction. This vector is only updated if the player is actively moving at the
-  time of the check.
-</p>
+<details>
+  <summary>
+    <h3>Sword aiming issues (also 10/12)</h3>
+  </summary>
+  <p>
+    I wasn't very good at trig. So. Radians threw me for a loop even when
+    converting to/from degrees. I tried multiple times for the sword to swing at
+    an angle perpendicular to the mouse position, but it was horribly
+    inconsistent.
+  </p>
+  <p>
+    I eventually decided for the sword to swing in the last axis movement
+    direction. This vector is only updated if the player is actively moving at
+    the time of the check.
+  </p>
+</details>
 
 <h2>Notes</h2>
 <h3>Color Palette</h3>
