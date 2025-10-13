@@ -52,10 +52,18 @@ static func _tool_anim_from_type(type: Type) -> StringName:
 
 func _ready() -> void:
 	self.connect("body_entered", _on_picked_up)
+	self.connect("area_entered", _on_picked_up)
 	Sprite.play()
 
 
-func _on_picked_up(body: Node2D) -> void:
-	if body is Player:
-		PickupEventBus.picked_up.emit(self.pickup_type)
-		self.queue_free()
+func _pick_me_up() -> void:
+	PickupEventBus.picked_up.emit(self.pickup_type)
+	self.queue_free()
+
+
+func _on_picked_up(body_or_area: Node2D) -> void:
+	var is_player: bool = body_or_area is Player
+	var is_sword: bool = body_or_area is Sword and (body_or_area as Sword).is_swinging
+	
+	if is_player or is_sword:
+		_pick_me_up()

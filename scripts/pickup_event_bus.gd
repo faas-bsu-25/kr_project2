@@ -16,7 +16,11 @@ func _handle_pickup(type: Pickup.Type) -> void:
 	match type:
 		Pickup.Type.KEY:
 			$Sounds/KeySound.play()
-		Pickup.Type.HALF_HEART, Pickup.Type.HEART:
+		Pickup.Type.HALF_HEART:
+			$Sounds/HeartSound.pitch_scale = 1.5
+			$Sounds/HeartSound.play()
+		Pickup.Type.HEART:
+			$Sounds/HeartSound.pitch_scale = 1
 			$Sounds/HeartSound.play()
 		
 		_: ## default case

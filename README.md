@@ -192,10 +192,29 @@
   node of a higher-level GameManager class. Ultimately I decided against it.
   While asking the BSU Game Dev Discord server about putting all signals in one
   file or putting related signals into each manager. Manager. Dr. Gestwicki was
-  kind enough to point at that the word "Manager" is meaningless. He offered,
-  "The name 'manager' means 'I don't know what this does :)" Ánd, he's right.
-  This prompted me to rename my singletons. Exit, <code>PickupManager</code>.
-  Enter, <code>PickupEventBus</code>. ✨
+  kind enough to
+  <a
+    href="https://discord.com/channels/829049561867485203/829049561867485206/1426997915569623140"
+    target="_blank"
+    >point out</a
+  >
+  that the word "Manager" is meaningless. He offered, "The name 'manager' means
+  'I don't know what this does :)" Ánd, he's right. This prompted me to rename
+  my singletons. Exit, <code>PickupManager</code>. Enter,
+  <code>PickupEventBus</code>. ✨
+</p>
+
+<h3>Sword aiming issues (also 10/12)</h3>
+<p>
+  I wasn't very good at trig. So. Radians threw me for a loop even when
+  converting to/from degrees. I tried multiple times for the sword to swing at
+  an angle perpendicular to the mouse position, but it was horribly
+  inconsistent.
+</p>
+<p>
+  I eventually decided for the sword to swing in the last axis movement
+  direction. This vector is only updated if the player is actively moving at the
+  time of the check.
 </p>
 
 <h2>Notes</h2>

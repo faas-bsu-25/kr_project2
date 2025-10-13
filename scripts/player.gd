@@ -5,53 +5,65 @@ extends CharacterBody2D
 
 enum State {
 	IDLE,
-	WALK,
+	WALKING,
+	SWINGING,
 	#HIT,
 	#DEFEATED,
 	#FALL,
 	#END,
 }
 
-const MOVE_SPEED: float = 8000.0
+const _MOVE_SPEED: float = 8000.0
+
 @export var state: State = State.IDLE
-var flipped: bool = false
+
+var _flipped: bool = false
+var _last_move_dir: Vector2 = Vector2.RIGHT ## default sprite-facing direction
+
 @onready var Sprite: Sprite2D = $Sprite
-
-
-func _ready() -> void:
-	pass
+@onready var sword: Sword = $Sword
 
 
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("swing_sword") and not state == State.SWINGING:
+		sword.swing(_last_move_dir.angle())
+	
 	self.state = _determine_state()
 	_flip_if_necessary()
 
 
 func _physics_process(delta: float) -> void:
 	var move_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	self.velocity = move_dir * MOVE_SPEED * delta
+	
+	if state == State.SWINGING:
+		self.velocity = Vector2.ZERO
+	else:
+		self.velocity = move_dir * _MOVE_SPEED * delta
+		_last_move_dir = move_dir if state == State.WALKING else _last_move_dir
 	
 	move_and_slide()
 
 
 func _determine_state() -> State:
-	if self.velocity == Vector2.ZERO:
+	if (not sword == null) and sword.is_swinging:
+		return State.SWINGING
+	elif self.velocity == Vector2.ZERO:
 		return State.IDLE
 	else:
-		return State.WALK
+		return State.WALKING
 
 
 func _flip_if_necessary() -> void:
 	## order matters for short-circuiting
-	if not flipped and velocity.x < 0:
+	if not _flipped and velocity.x < 0:
 		_flip()
-	elif flipped and velocity.x > 0:
+	elif _flipped and velocity.x > 0:
 		_unflip()
 
 func _flip() -> void:
 	Sprite.flip_h = true
-	flipped = true
+	_flipped = true
 
 func _unflip() -> void:
 	Sprite.flip_h = false
-	flipped = false
+	_flipped = false

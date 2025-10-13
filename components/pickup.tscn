@@ -19,4 +19,4 @@ scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_8j826")
 animation = &"bean"
 autoplay = "bean"
-frame_progress = 0.24717504
+frame_progress = 0.18327944
