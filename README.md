@@ -233,6 +233,22 @@
   </p>
 </details>
 
+<details>
+  <summary>
+    <h3>(ceramic) Pot issues (10/13 🎂)</h3>
+  </summary>
+  <p>
+    Remember that issue I had where I needed to defer the call to change the
+    pickup's animation in accordance with a change of type......
+  </p>
+  <p>
+    Yeah it was really hard to get the pot to spawn it because once again the
+    pot made the pickup try to change its type before the whole thing had
+    loaded. Rahhhh.
+  </p>
+  <p>I eventually figured it out, though.</p>
+</details>
+
 <h2>Notes</h2>
 <h3>Color Palette</h3>
 <p>The Super Gameboy Quest assets feature the following 2-bit color palette:</p>

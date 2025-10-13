@@ -3,6 +3,7 @@
 class_name Pickup
 extends Area2D
 
+
 enum Type {
 	BEAN,
 	BOMB,
@@ -13,6 +14,8 @@ enum Type {
 	KEY,
 	POTION,
 }
+
+const SCENE: PackedScene = preload("res://components/pickup.tscn")
 
 @export var pickup_type: Type = Type.BEAN:
 	set(new_type):
@@ -25,6 +28,12 @@ enum Type {
 
 @onready var Shape: CollisionShape2D = $Shape
 @onready var Sprite: AnimatedSprite2D = $Sprite
+
+
+static func new_pickup(type: Pickup.Type) -> Pickup:
+	var pickup: Pickup = SCENE.instantiate()
+	(func() -> void: pickup.pickup_type = type).call_deferred()
+	return pickup
 
 
 static func _tool_anim_from_type(type: Type) -> StringName:
