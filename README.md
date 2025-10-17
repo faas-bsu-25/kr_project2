@@ -152,6 +152,9 @@
       <a href="https://placehold.co">Placehold</a> (used for color previews
       below)
     </li>
+	<li>
+	  <a href="https://www.youtube.com/watch?v=H_qn6A_RIFE">How to Use Scene Tiles in Godot</a> (a short and sweet rundown on Scene Tiles and scripts)
+	</li>
   </ul>
 </nav>
 
