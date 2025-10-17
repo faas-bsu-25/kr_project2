@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb8kybxf30m17"
-path="res://.godot/imported/props.png-23f7386038aef8a9dab48066a3fc1eb8.ctex"
+uid="uid://6hafn2hy7qqt"
+path="res://.godot/imported/icon_human_controller.png-5f779fe1e0baef7917763e7de0b4ecd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/props.png"
-dest_files=["res://.godot/imported/props.png-23f7386038aef8a9dab48066a3fc1eb8.ctex"]
+source_file="res://assets/node-icons/icon_human_controller.png"
+dest_files=["res://.godot/imported/icon_human_controller.png-5f779fe1e0baef7917763e7de0b4ecd3.ctex"]
 
 [params]
 

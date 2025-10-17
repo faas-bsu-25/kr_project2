@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=3 uid="uid://blqmiaat7hryk"]
 
 [ext_resource type="Script" uid="uid://c4lq3yaof04by" path="res://scripts/pickup.gd" id="1_1ftq6"]
-[ext_resource type="Texture2D" uid="uid://d0ihtkatn5fn" path="res://assets/sgq_dungeon/pickup_items_animated.png" id="2_1ftq6"]
+[ext_resource type="Texture2D" uid="uid://d0ihtkatn5fn" path="res://assets/sgq_dungeons/pickup_items_animated.png" id="2_1ftq6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ftq6"]
 
@@ -277,7 +277,6 @@ script = ExtResource("1_1ftq6")
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
-rotation = 1.5707964
 shape = SubResource("CircleShape2D_1ftq6")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -286,4 +285,10 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_4agxr")
 animation = &"bean"
 autoplay = "bean"
-frame_progress = 0.458382
+frame_progress = 0.0016708856
+
+[node name="PickupDelayTimer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[connection signal="timeout" from="PickupDelayTimer" to="." method="_on_pickup_delay_timer_timeout"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyvj6yum3pq2p"
-path="res://.godot/imported/icon_character.png-fb5c6c680c07d3386384f986655e612c.ctex"
+uid="uid://d0ihtkatn5fn"
+path="res://.godot/imported/pickup_items_animated.png-3dd466ab6756d60ea6c0ed855dfc0a00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/node-icons/icon_character.png"
-dest_files=["res://.godot/imported/icon_character.png-fb5c6c680c07d3386384f986655e612c.ctex"]
+source_file="res://assets/sgq_dungeons/pickup_items_animated.png"
+dest_files=["res://.godot/imported/pickup_items_animated.png-3dd466ab6756d60ea6c0ed855dfc0a00.ctex"]
 
 [params]
 

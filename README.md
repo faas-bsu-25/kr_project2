@@ -7,18 +7,18 @@
 <details>
   <summary><h2>Requirements</h2></summary>
   <ul>
-    <li>3 level devices (doors, ladder, spring)</li>
-    <ul>
-      <li>At least one must communicate with the game singleton</li>
-    </ul>
-    <li>
-      1 collectible that is used to control access to other parts of the level
-    </li>
-    <ul>
-      <li>Ammo, keys, gems</li>
-    </ul>
-    <li>
-      Playable character (use Godot's build in script to start if making a
+	<li>3 level devices (doors, ladder, spring)</li>
+	<ul>
+	  <li>At least one must communicate with the game singleton</li>
+	</ul>
+	<li>
+	  1 collectible that is used to control access to other parts of the level
+	</li>
+	<ul>
+	  <li>Ammo, keys, gems</li>
+	</ul>
+	<li>
+	  Playable character (use Godot's build in script to start if making a
       platformer)
     </li>
     <li>2 levels minimum</li>
@@ -45,28 +45,28 @@
 <a href="https://toadzillart.itch.io/dungeons-pack" target="_blank">
   <img
     src="https://img.itch.zone/aW1nLzE1MzE3ODYxLmdpZg==/original/R9Cmel.gif"
-    alt='"Super Gameboy Quest - Dungeons pack" by Toadzillart on itch.io'
+	alt='"Super Gameboy Quest - Dungeons pack" by Toadzillart on itch.io'
     height="160px"
   />
 </a>
 <a href="https://toadzillart.itch.io/Monster-pack" target="_blank">
   <img
     src="https://img.itch.zone/aW1nLzE1MzE3ODc0LmdpZg==/original/ZywAS6.gif"
-    alt='"Super Gameboy Quest - Enemies pack" by Toadzillart on itch.io'
+	alt='"Super Gameboy Quest - Enemies pack" by Toadzillart on itch.io'
     height="160px"
   />
 </a>
 <a href="https://toadzillart.itch.io/ui-pack" target="_blank">
   <img
     src="https://img.itch.zone/aW1nLzE1MzE3ODgwLmdpZg==/original/KsyOhU.gif"
-    alt='"Super Gameboy Quest - UI pack" by Toadzillart on itch.io'
+	alt='"Super Gameboy Quest - UI pack" by Toadzillart on itch.io'
     height="160px"
   />
 </a>
 <a href="https://pixel-boy.itch.io/icon-godot-node" target="_blank">
   <img
     src="https://img.itch.zone/aW1nLzE3MTM0MjcwLnBuZw==/315x250%23c/er89Ot.png"
-    alt='"Icon Node For Godot" by pixel-boy on itch.io'
+	alt='"Icon Node For Godot" by pixel-boy on itch.io'
     height="160px"
   />
 </a>
@@ -168,19 +168,19 @@
   </p>
 
   <p>
-    But trying to make a whole game like this? It's so hard to find a good way
-    to write this code. I was about to make subclasses of a
-    <code>PickupItem</code> where the scripts only contained class names. How on
-    earth did my line of reasoning get to <i>that?</i>
+	But trying to make a whole game like this? It's so hard to find a good way
+	to write this code. I was about to make subclasses of a
+	<code>PickupItem</code> where the scripts only contained class names. How on
+	earth did my line of reasoning get to <i>that?</i>
   </p>
 </details>
 
 <details>
   <summary>
-    <h3>Tool Script MEGA troubles (also 10/11)</h3>
+	<h3>Tool Script MEGA troubles (also 10/11)</h3>
   </summary>
   <p>
-    Dr. Faas, if you're reading this, you might remember my
+	Dr. Faas, if you're reading this, you might remember my
     <a
       href="https://discord.com/channels/829049561867485203/829049561867485206/1426747719883690065"
       >spiel</a
@@ -209,19 +209,19 @@
       target="_blank"
       >point out</a
     >
-    that the word "Manager" is meaningless. He offered, "The name 'manager'
-    means 'I don't know what this does :)" Ánd, he's right. This prompted me to
-    rename my singletons. Exit, <code>PickupManager</code>. Enter,
-    <code>PickupEventBus</code>. ✨
+	that the word "Manager" is meaningless. He offered, "The name 'manager'
+	means 'I don't know what this does :)" Ánd, he's right. This prompted me to
+	rename my singletons. Exit, <code>PickupManager</code>. Enter,
+	<code>PickupEventBus</code>. ✨
   </p>
 </details>
 
 <details>
   <summary>
-    <h3>Sword aiming issues (also 10/12)</h3>
+	<h3>Sword aiming issues (also 10/12)</h3>
   </summary>
   <p>
-    I wasn't very good at trig. So. Radians threw me for a loop even when
+	I wasn't very good at trig. So. Radians threw me for a loop even when
     converting to/from degrees. I tried multiple times for the sword to swing at
     an angle perpendicular to the mouse position, but it was horribly
     inconsistent.
@@ -239,14 +239,45 @@
   </summary>
   <p>
     Remember that issue I had where I needed to defer the call to change the
-    pickup's animation in accordance with a change of type......
+	pickup's animation in accordance with a change of type......
   </p>
   <p>
-    Yeah it was really hard to get the pot to spawn it because once again the
-    pot made the pickup try to change its type before the whole thing had
-    loaded. Rahhhh.
+	Yeah it was really hard to get the pot to spawn it because once again the
+	pot made the pickup try to change its type before the whole thing had
+	loaded. Rahhhh.
   </p>
   <p>I eventually figured it out, though.</p>
+</details>
+
+<details>
+  <summary>
+	<h3>Scene Tile Woes and Smart Snap Prose (10/17)</h3>
+  </summary>
+  <p>
+	I was VERY excited to turn my pot into a scene tile. It was gonna be so
+	easy. I click, I click, boom, pot. HOWEVER...
+  </p>
+  <p>
+	Apparently, if a scene tile has export variables, they cannot be accessed
+	when the scene is placed as a tile. For something like floor spikes which
+	are generally self-contained, this is fine. For the pots, on the other hand,
+	they are completely reliant on editable drops. A dealbreaker.
+  </p>
+  <p>
+	Fortunately, smart snap exists. You know how, as you move elements in a
+	slide on PowerPoint, those orange lines will snap your element to align with
+	the top, bottom, or middle of other elements? That's what smart snap does.
+    Generally, it makes lining up hand-placed scenes with their tile friends.
+  </p>
+  <p>
+    This pot, despite looking perfectly like a tile....is entirely separate.
+    Yay.
+    <img
+      src="README/snapped_pot.png"
+      alt="scene with a pot lined up with a tile"
+      height="250px"
+    />
+  </p>
 </details>
 
 <h2>Notes</h2>

@@ -1,117 +1,77 @@
-[gd_scene load_steps=6 format=3 uid="uid://rsxycqet1ofk"]
+[gd_scene load_steps=10 format=3 uid="uid://rsxycqet1ofk"]
 
-[ext_resource type="Texture2D" uid="uid://bu4gomx0sse5w" path="res://assets/sgq_dungeon/weapons_animated.png" id="1_8kijg"]
+[ext_resource type="Texture2D" uid="uid://bu4gomx0sse5w" path="res://assets/sgq_dungeons/weapons_animated.png" id="1_8kijg"]
 [ext_resource type="Script" uid="uid://uh0bvc530r02" path="res://scripts/sword.gd" id="1_801lv"]
 
-[sub_resource type="Animation" id="Animation_801lv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0009999999),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:monitoring")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("HitboxPreview:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_801lv"]
+atlas = ExtResource("1_8kijg")
+region = Rect2(0, 96, 48, 48)
 
-[sub_resource type="Animation" id="Animation_8kijg"]
-resource_name = "swing"
-length = 0.60001004
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [22, 23, 24, 25, 26, 27]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:monitoring")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath("HitboxPreview:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_moaxq"]
+atlas = ExtResource("1_8kijg")
+region = Rect2(48, 96, 48, 48)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_moaxq"]
-_data = {
-&"RESET": SubResource("Animation_801lv"),
-&"swing": SubResource("Animation_8kijg")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fpgw"]
+atlas = ExtResource("1_8kijg")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2cpy"]
+atlas = ExtResource("1_8kijg")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v3ka"]
+atlas = ExtResource("1_8kijg")
+region = Rect2(192, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wmmq"]
+atlas = ExtResource("1_8kijg")
+region = Rect2(240, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4sbp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_801lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moaxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fpgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2cpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v3ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wmmq")
+}],
+"loop": false,
+"name": &"swing",
+"speed": 8.0
+}]
 
 [node name="Sword" type="Area2D"]
 monitoring = false
 script = ExtResource("1_801lv")
 
-[node name="Hitbox" type="CollisionPolygon2D" parent="."]
+[node name="Hurtbox" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(49, 39, 30, 30, 38, 0, 33, -27, 33, -39, 45, -33, 54, -24, 66, 6, 66, 23, 60, 39)
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
-texture = ExtResource("1_8kijg")
-hframes = 11
-vframes = 16
-frame = 22
+sprite_frames = SubResource("SpriteFrames_i4sbp")
+animation = &"swing"
+frame = 5
+frame_progress = 1.0
 
-[node name="HitboxPreview" type="Polygon2D" parent="."]
+[node name="HurtboxPreview" type="Polygon2D" parent="."]
 visible = false
 color = Color(1, 0, 0, 0.49803922)
 polygon = PackedVector2Array(49, 39, 30, 30, 38, 0, 33, -27, 33, -39, 45, -33, 54, -24, 66, 6, 66, 23, 60, 39)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_moaxq")
-}
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

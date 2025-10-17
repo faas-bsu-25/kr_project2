@@ -17,26 +17,40 @@ enum Type {
 
 const SCENE: PackedScene = preload("res://components/pickup.tscn")
 
+## TOOL
 @export var pickup_type: Type = Type.BEAN:
 	set(new_type):
 		pickup_type = new_type
 		
-		var _tool_change_name: Callable = func(type: Type) -> void:
-			Sprite.animation = _tool_anim_from_type(type)
+		var _TOOL_change_name: Callable = func(type: Type) -> void:
+			Sprite.animation = _TOOL_anim_from_type(type)
 		
-		_tool_change_name.call_deferred(new_type)
+		_TOOL_change_name.call_deferred(new_type)
 
-@onready var Shape: CollisionShape2D = $Shape
+@export_subgroup("Delay")
+@export var has_pickup_delay: bool = false;
+@export_custom(PROPERTY_HINT_NONE, "suffix:seconds") var delay_for: float = 3.0
+@export_subgroup("")
+
 @onready var Sprite: AnimatedSprite2D = $Sprite
+@onready var PickupDelayTimer: Timer = $PickupDelayTimer
 
 
-static func new_pickup(type: Pickup.Type) -> Pickup:
+static func new_pickup(type: Pickup.Type, has_delay: bool) -> Pickup:
 	var pickup: Pickup = SCENE.instantiate()
+	
+	## deferred not because of itself, but because it triggers
+	## pickup_type: set(type): ...
+	## this requires the Sprite to be loaded, so it must be delayed
+	## until after this is the case. failure to defer will cause
+	## an immediate runtime crash.
 	(func() -> void: pickup.pickup_type = type).call_deferred()
+	pickup.has_pickup_delay = has_delay
+	
 	return pickup
 
 
-static func _tool_anim_from_type(type: Type) -> StringName:
+static func _TOOL_anim_from_type(type: Type) -> StringName:
 	match (type):
 		Type.BEAN:
 			return &"bean"
@@ -63,6 +77,14 @@ func _ready() -> void:
 	self.connect("body_entered", _on_picked_up)
 	self.connect("area_entered", _on_picked_up)
 	Sprite.play()
+	
+	if self.has_pickup_delay:
+		self.monitoring = false
+		PickupDelayTimer.start()
+
+
+func _on_pickup_delay_timer_timeout() -> void:
+	self.monitoring = true
 
 
 func _pick_me_up() -> void:

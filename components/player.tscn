@@ -133,7 +133,7 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6tfq5"]
 advance_mode = 2
-advance_expression = "state == State.WALK"
+advance_expression = "state == State.WALKING"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vfekd"]
 advance_mode = 2
@@ -173,3 +173,5 @@ advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="Sword" parent="." instance=ExtResource("3_uapwn")]
+show_hurtbox = true
+metadata/_edit_lock_ = true

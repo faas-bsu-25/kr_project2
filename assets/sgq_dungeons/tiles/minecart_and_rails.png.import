@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu4gomx0sse5w"
-path="res://.godot/imported/weapons_animated.png-aea40b71da572215e91f569911e8612c.ctex"
+uid="uid://cpnf2ml3il4e4"
+path="res://.godot/imported/minecart_and_rails.png-c63f364172b6732c4487bc8aabc0bc5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/weapons_animated.png"
-dest_files=["res://.godot/imported/weapons_animated.png-aea40b71da572215e91f569911e8612c.ctex"]
+source_file="res://assets/sgq_dungeons/tiles/minecart_and_rails.png"
+dest_files=["res://.godot/imported/minecart_and_rails.png-c63f364172b6732c4487bc8aabc0bc5b.ctex"]
 
 [params]
 

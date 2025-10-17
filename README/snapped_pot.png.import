@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk5ymym68ih5t"
-path="res://.godot/imported/walls.png-261740b8b0acfbae8f28c5eff6be708b.ctex"
+uid="uid://qydogvi6uxyg"
+path="res://.godot/imported/snapped_pot.png-b171c9fbc204b77af44d6ee1726820f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/tiles/walls.png"
-dest_files=["res://.godot/imported/walls.png-261740b8b0acfbae8f28c5eff6be708b.ctex"]
+source_file="res://README/snapped_pot.png"
+dest_files=["res://.godot/imported/snapped_pot.png-b171c9fbc204b77af44d6ee1726820f0.ctex"]
 
 [params]
 

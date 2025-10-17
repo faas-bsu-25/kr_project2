@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://datvfgtm32kir"
-path="res://.godot/imported/surground.png-e8794fb48add94e07e9ff8274169b847.ctex"
+uid="uid://ycjnh74hjsd3"
+path="res://.godot/imported/icon_pot.png-641ac7f72c009dc732bcec5a21d60b8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/tiles/surground.png"
-dest_files=["res://.godot/imported/surground.png-e8794fb48add94e07e9ff8274169b847.ctex"]
+source_file="res://assets/node-icons/icon_pot.png"
+dest_files=["res://.godot/imported/icon_pot.png-641ac7f72c009dc732bcec5a21d60b8f.ctex"]
 
 [params]
 

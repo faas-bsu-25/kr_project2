@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0ihtkatn5fn"
-path="res://.godot/imported/pickup_items_animated.png-176c3ccd0e70b689575bc341409a54fb.ctex"
+uid="uid://4vtm0c1yj4i1"
+path="res://.godot/imported/grounds.png-142d344b5850d3703141682584effc5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/pickup_items_animated.png"
-dest_files=["res://.godot/imported/pickup_items_animated.png-176c3ccd0e70b689575bc341409a54fb.ctex"]
+source_file="res://assets/sgq_dungeons/tiles/grounds.png"
+dest_files=["res://.godot/imported/grounds.png-142d344b5850d3703141682584effc5a.ctex"]
 
 [params]
 

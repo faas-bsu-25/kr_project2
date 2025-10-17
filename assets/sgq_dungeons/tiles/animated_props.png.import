@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjs37unc7vnhy"
-path="res://.godot/imported/elf.png-67d9cfcf341958fce1ae42c24bef36c4.ctex"
+uid="uid://du5ptdfdv7akc"
+path="res://.godot/imported/animated_props.png-86deff0cb8c7cadd02ba204788231536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeon/elf.png"
-dest_files=["res://.godot/imported/elf.png-67d9cfcf341958fce1ae42c24bef36c4.ctex"]
+source_file="res://assets/sgq_dungeons/tiles/animated_props.png"
+dest_files=["res://.godot/imported/animated_props.png-86deff0cb8c7cadd02ba204788231536.ctex"]
 
 [params]
 

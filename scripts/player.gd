@@ -1,4 +1,4 @@
-@icon("res://assets/node-icons/icon_character.png")
+@icon("res://assets/node-icons/icon_human_controller.png")
 class_name Player
 extends CharacterBody2D
 
