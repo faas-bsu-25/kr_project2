@@ -267,7 +267,7 @@
 	Fortunately, smart snap exists. You know how, as you move elements in a
 	slide on PowerPoint, those orange lines will snap your element to align with
 	the top, bottom, or middle of other elements? That's what smart snap does.
-    Generally, it makes lining up hand-placed scenes with their tile friends.
+    Generally, it makes lining up hand-placed scenes with their tile friends much easier.
   </p>
   <p>
     This pot, despite looking perfectly like a tile....is entirely separate.
