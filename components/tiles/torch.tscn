@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv0opto624l56"]
+
+[ext_resource type="SpriteFrames" uid="uid://b0ynbf0hfatjm" path="res://resources/animated_props-frames.tres" id="1_d80np"]
+
+[node name="Torch" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_d80np")
+animation = &"torch"
+autoplay = "torch"

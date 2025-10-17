@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dful7v0sll1qm" path="res://resources/props_atlas.tres" id="2_d1m4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3036"]
-size = Vector2(48, 48)
+size = Vector2(48, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0mkce"]
 atlas = ExtResource("2_d1m4l")
@@ -15,7 +15,7 @@ script = ExtResource("1_birj5")
 metadata/_edit_group_ = true
 
 [node name="Shape" type="CollisionShape2D" parent="."]
-position = Vector2(4.7683716e-07, 0)
+position = Vector2(4.7683716e-07, -12)
 shape = SubResource("RectangleShape2D_j3036")
 
 [node name="Sprite" type="Sprite2D" parent="."]

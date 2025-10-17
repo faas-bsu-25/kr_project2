@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 [autoload]
 
 PickupEventBus="*res://components/pickup_event_bus.tscn"
+TileEventBus="*res://components/tile_event_bus.tscn"
 
 [debug]
 

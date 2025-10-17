@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxsyswuh6r8gp"]
+
+[ext_resource type="Script" uid="uid://bfsgrkvrssk8h" path="res://scripts/tile_event_bus.gd" id="1_vxrh8"]
+[ext_resource type="AudioStream" uid="uid://brnwpuoi1bo1k" path="res://assets/custom/pot_shatter.wav" id="2_gin0a"]
+
+[node name="TileEventBus" type="Node"]
+script = ExtResource("1_vxrh8")
+
+[node name="PotShatterSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gin0a")

@@ -13,6 +13,7 @@ var _hit_a_pot: bool = false
 
 @onready var Sprite: AnimatedSprite2D = $Sprite
 @onready var HurtboxPreview: Polygon2D = $HurtboxPreview
+@onready var SwingSound: AudioStreamPlayer = $SwingSound
 
 
 func _process(_delta: float) -> void:
@@ -38,6 +39,7 @@ func _within_activation_frames() -> bool:
 
 
 func _activate_hurtbox() -> void:
+	SwingSound.play()
 	self.monitoring = true
 	
 	if show_hurtbox:

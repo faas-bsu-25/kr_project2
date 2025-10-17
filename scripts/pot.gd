@@ -15,4 +15,5 @@ func shatter() -> void:
 		dropped_pickup.position = self.position + random_offset_pos
 		add_sibling.call_deferred(dropped_pickup)
 	
+	TileEventBus.tile_fired.emit(self)
 	self.queue_free()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://rsxycqet1ofk"]
+[gd_scene load_steps=11 format=3 uid="uid://rsxycqet1ofk"]
 
 [ext_resource type="Texture2D" uid="uid://bu4gomx0sse5w" path="res://assets/sgq_dungeons/weapons_animated.png" id="1_8kijg"]
 [ext_resource type="Script" uid="uid://uh0bvc530r02" path="res://scripts/sword.gd" id="1_801lv"]
+[ext_resource type="AudioStream" uid="uid://c2wfn0o8v60uq" path="res://assets/custom/sword_swing.wav" id="3_moaxq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_801lv"]
 atlas = ExtResource("1_8kijg")
@@ -72,6 +73,9 @@ frame_progress = 1.0
 visible = false
 color = Color(1, 0, 0, 0.49803922)
 polygon = PackedVector2Array(49, 39, 30, 30, 38, 0, 33, -27, 33, -39, 45, -33, 54, -24, 66, 6, 66, 23, 60, 39)
+
+[node name="SwingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_moaxq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

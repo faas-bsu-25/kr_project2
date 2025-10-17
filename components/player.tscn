@@ -153,6 +153,13 @@ graph_offset = Vector2(-64.55994, 57.851852)
 motion_mode = 1
 script = ExtResource("1_51jd6")
 
+[node name="Sword" parent="." instance=ExtResource("3_uapwn")]
+show_hurtbox = true
+metadata/_edit_lock_ = true
+
+[node name="Camera" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
 [node name="Shape" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_jjeyt")
 
@@ -171,7 +178,3 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_wtmby")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-
-[node name="Sword" parent="." instance=ExtResource("3_uapwn")]
-show_hurtbox = true
-metadata/_edit_lock_ = true
