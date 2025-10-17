@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://biocn4agno8co"]
+
+[ext_resource type="SpriteFrames" uid="uid://b0ynbf0hfatjm" path="res://resources/animated_props-frames.tres" id="1_ybuw8"]
+
+[node name="Campfire" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_ybuw8")
+animation = &"campfire"
+autoplay = "campfire"
+frame_progress = 0.19221932
+offset = Vector2(0, -10)
