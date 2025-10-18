@@ -25,8 +25,13 @@ var _last_move_dir: Vector2 = Vector2.RIGHT ## default sprite-facing direction
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("swing_sword") and not state == State.SWINGING:
-		sword.swing(_last_move_dir.angle())
+	if not state == State.SWINGING:
+		if Input.is_action_just_pressed("swing_sword"):
+			sword.swing(_last_move_dir.angle())
+		elif Input.is_action_just_pressed("place_bomb"):
+			var bomb: Bomb = Bomb.new_bomb()
+			bomb.position = self.position
+			add_sibling(bomb)
 	
 	self.state = _determine_state()
 	_flip_if_necessary()

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvyo178ix6uod"]
+
+[ext_resource type="Script" uid="uid://bwcpi5xq2bw1o" path="res://scripts/cracked_block.gd" id="1_d6mb6"]
+[ext_resource type="Texture2D" uid="uid://bnec8ig2n3i2b" path="res://assets/sgq_dungeons/tiles/props.png" id="2_lypht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd2tj"]
+size = Vector2(16, 8)
+
+[node name="CrackedBlock" type="StaticBody2D"]
+script = ExtResource("1_d6mb6")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_hd2tj")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_lypht")
+hframes = 19
+vframes = 8
+frame = 39

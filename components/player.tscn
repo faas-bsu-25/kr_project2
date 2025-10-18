@@ -152,6 +152,7 @@ graph_offset = Vector2(-64.55994, 57.851852)
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_51jd6")
+metadata/_edit_group_ = true
 
 [node name="Sword" parent="." instance=ExtResource("3_uapwn")]
 show_hurtbox = true

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://1734kr0qai35"]
+
+[ext_resource type="SpriteFrames" uid="uid://b0ynbf0hfatjm" path="res://resources/animated_props-frames.tres" id="1_fbrvv"]
+
+[node name="CoinPile" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_fbrvv")
+animation = &"coin_pile"
+autoplay = "coin_pile"
+frame_progress = 0.20269322

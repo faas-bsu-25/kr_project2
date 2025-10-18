@@ -114,13 +114,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a0jas")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pilmd")
 }],
-"loop": true,
+"loop": false,
 "name": &"chest",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -160,7 +157,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ky0am")
 }],
 "loop": true,
-"name": &"coins",
+"name": &"coin_pile",
 "speed": 10.0
 }, {
 "frames": [{
