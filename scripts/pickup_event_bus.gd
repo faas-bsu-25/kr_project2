@@ -6,6 +6,9 @@ extends Node
 
 signal picked_up(type: Pickup.Type)
 
+var keys: int = 0;
+var bombs: int = 0;
+
 
 func _ready() -> void:
 	picked_up.connect(_handle_pickup)
@@ -16,6 +19,10 @@ func _handle_pickup(type: Pickup.Type) -> void:
 	match type:
 		Pickup.Type.KEY:
 			$Sounds/KeySound.play()
+			keys += 1
+		Pickup.Type.BOMB:
+			$Sounds/GenericSound.play()
+			bombs += 1
 		Pickup.Type.HALF_HEART:
 			$Sounds/HeartSound.pitch_scale = 1.5
 			$Sounds/HeartSound.play()

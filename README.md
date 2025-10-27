@@ -149,6 +149,7 @@
   <h3>Other Sites</h3>
   <ul>
     <li>
+      <img src="https://placehold.co/15x15?text=P" alt="Placehold.co">
       <a href="https://placehold.co">Placehold</a> (used for color previews
       below)
     </li>

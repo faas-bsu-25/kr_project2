@@ -67,11 +67,10 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_i4sbp")
 animation = &"swing"
 frame = 5
-frame_progress = 1.0
 
 [node name="HurtboxPreview" type="Polygon2D" parent="."]
 visible = false
-color = Color(1, 0, 0, 0.49803922)
+color = Color(0.61339027, 0.61339027, 0.61339027, 0.49803922)
 polygon = PackedVector2Array(49, 39, 30, 30, 38, 0, 33, -27, 33, -39, 45, -33, 54, -24, 66, 6, 66, 23, 60, 39)
 
 [node name="SwingSound" type="AudioStreamPlayer" parent="."]

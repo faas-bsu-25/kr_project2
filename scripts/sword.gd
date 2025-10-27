@@ -6,10 +6,11 @@ extends Area2D
 const _ACTIVATION_FRAME: int = 2
 const _DEACTIVATION_FRAME: int = 4
 
-@export var show_hurtbox: bool = false;
-
 var is_swinging: bool = false
 var _hit_a_pot: bool = false
+
+var active_preview_color: Color = Color(255, 0, 0, 127)
+var inactive_preview_color: Color = Color(122, 122, 122, 127)
 
 @onready var Sprite: AnimatedSprite2D = $Sprite
 @onready var HurtboxPreview: Polygon2D = $HurtboxPreview
@@ -43,14 +44,12 @@ func _within_activation_frames() -> bool:
 func _activate_hurtbox() -> void:
 	SwingSound.play()
 	self.monitoring = true
-	
-	if show_hurtbox:
-		HurtboxPreview.visible = true
+	$HurtboxPreview.color = active_preview_color
 
 
 func _deactivate_hurtbox() -> void:
 	self.monitoring = false
-	HurtboxPreview.visible = false
+	$HurtboxPreview.color = inactive_preview_color
 
 
 func swing(angle_rad: float) -> void:

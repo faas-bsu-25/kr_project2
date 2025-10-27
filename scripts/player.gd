@@ -28,7 +28,8 @@ func _process(_delta: float) -> void:
 	if not state == State.SWINGING:
 		if Input.is_action_just_pressed("swing_sword"):
 			sword.swing(_last_move_dir.angle())
-		elif Input.is_action_just_pressed("place_bomb"):
+		elif Input.is_action_just_pressed("place_bomb") and PickupEventBus.bombs > 0:
+			PickupEventBus.bombs -= 1
 			var bomb: Bomb = Bomb.new_bomb()
 			bomb.position = self.position
 			add_sibling(bomb)

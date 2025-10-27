@@ -10,6 +10,7 @@ static var _SCENE: PackedScene = preload("res://components/bomb.tscn")
 @onready var points_in_gradient: int = timer_gradient.get_point_count()
 
 @onready var ExpShape: CollisionShape2D = $Shape
+@onready var Sprite: Sprite2D = $Sprite
 @onready var ExpTimer: Timer = $ExplosionTimer
 @onready var DespawnTimer: Timer = $DespawnTimer
 
@@ -29,6 +30,8 @@ func _process(_delta: float) -> void:
 		return
 	else:
 		self.modulate = timer_gradient.get_color(gradient_time_index)
+		Sprite.scale += Vector2(0.01, 0.01)
+		
 
 
 func _on_body_entered(body: Node2D) -> void:
