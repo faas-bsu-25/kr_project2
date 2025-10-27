@@ -6,7 +6,7 @@ The README has been migrated to the repository's GitHub Pages webpage, which can
 | ----------- | ----------- |
 | Level Device 1 | Cracked Block |
 | Level Device 2 | Locked Door |
-| Level Device 3 | Pit/hole |
+| Level Device 3 | Pot |
 | Access Collectible 1 | Bomb |
 | Access Collectible 2 | Key |
 | Level 1 | ... |
