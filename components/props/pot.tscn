@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3036"]
 size = Vector2(48, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7m3h2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p74vu"]
 atlas = ExtResource("2_d1m4l")
 region = Rect2(48, 16, 16, 16)
 
@@ -20,4 +20,4 @@ shape = SubResource("RectangleShape2D_j3036")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
-texture = SubResource("AtlasTexture_7m3h2")
+texture = SubResource("AtlasTexture_p74vu")

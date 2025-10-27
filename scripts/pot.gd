@@ -16,4 +16,3 @@ func shatter() -> void:
 		add_sibling.call_deferred(dropped_pickup)
 	
 	TileEventBus.tile_fired.emit(self)
-	self.queue_free()

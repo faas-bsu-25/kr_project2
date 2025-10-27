@@ -29,6 +29,8 @@ func _on_body_entered(body: Node2D) -> void:
 		body.shatter()
 	elif body is Chest:
 		body.open()
+	elif body is Door:
+		body.unlock()
 
 
 func _on_sprite_animation_finished() -> void:

@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=4 uid="uid://c1f5w3ipn1sxv"]
+[gd_scene load_steps=10 format=4 uid="uid://c1f5w3ipn1sxv"]
 
-[ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/faux_tiles/pot.tscn" id="1_8pany"]
+[ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/props/pot.tscn" id="1_8pany"]
 [ext_resource type="PackedScene" uid="uid://co1odba0xc0kh" path="res://components/player.tscn" id="1_jqci3"]
 [ext_resource type="TileSet" uid="uid://0u6oub0fw12h" path="res://resources/ground_tileset.tres" id="1_w3rk7"]
 [ext_resource type="TileSet" uid="uid://dsvy81bsrgger" path="res://resources/surground_tileset.tres" id="2_0bprn"]
 [ext_resource type="PackedScene" uid="uid://blqmiaat7hryk" path="res://components/pickup.tscn" id="2_8pany"]
 [ext_resource type="TileSet" uid="uid://n0mxlbqwlgj0" path="res://resources/walls_tileset.tres" id="3_rfyb7"]
 [ext_resource type="TileSet" uid="uid://cj567rtrdkcdu" path="res://resources/props_tileset.tres" id="4_k6hqe"]
-[ext_resource type="PackedScene" uid="uid://cqdvy5wtgtirx" path="res://components/faux_tiles/chest.tscn" id="12_wiafy"]
+[ext_resource type="PackedScene" uid="uid://bg13jkbug35ic" path="res://components/props/door.tscn" id="7_0bprn"]
+[ext_resource type="PackedScene" uid="uid://cqdvy5wtgtirx" path="res://components/props/chest.tscn" id="12_wiafy"]
 
 [node name="DebugLevel" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -29,7 +30,7 @@ tile_map_data = PackedByteArray("AAASAAIAAAABAAMAAAASAAMAAAABAAAAAAASAAQAAAABAAA
 tile_set = ExtResource("3_rfyb7")
 
 [node name="Props" type="TileMapLayer" parent="Tiles"]
-tile_map_data = PackedByteArray("AAATAAMAAAAMAAAAAAATAAUAAAAAAAEAAAATAAYAAAACAAEAAAATAAgAAQAAAAAABQAUAAMAAAANAAAAAAAWAAIAAQAAAAAAAQAWAAMAAAADAAIAAAAWAAkAAAAAAAIAAAAWAAoAAAAAAAIAAAAXAAsAAwAMAAIAAAAYAAIAAQAAAAAAAQAYAAkAAAAAAAIAAAAYAAoAAAAAAAIAAAAZAAMAAQAAAAAABQAaAAcAAAAKAAAAAAAaAAoAAQAAAAAABgAbAAUAAQAAAAAABQAbAAYAAAABAAMAAAAbAAcAAAALAAAAAAAbAAoAAAAAAAMAAAAXAAkAAQAAAAAAAgAIAAUAAQAAAAAAAwAKAAQAAQAAAAAAAgALAAUAAgAEAAQAAAAIAAIAAQAAAAAAAQAIAAMAAAADAAIAAAAJAAUAAQAAAAAABAAKAAIAAQAAAAAAAQAKAAMAAAAAAAIAAAALAAMAAAAAAAEAAAAPAAMAAAAAAAMAAAAPAAYAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAATAAMAAAAMAAAAAAATAAUAAAAAAAEAAAATAAYAAAACAAEAAAATAAgAAQAAAAAABQAUAAMAAAANAAAAAAAWAAIAAQAAAAAAAQAWAAMAAAADAAIAAAAWAAkAAAAAAAIAAAAWAAoAAAAAAAIAAAAYAAIAAQAAAAAAAQAYAAkAAAAAAAIAAAAYAAoAAAAAAAIAAAAZAAMAAQAAAAAABQAaAAcAAAAKAAAAAAAaAAoAAQAAAAAABgAbAAUAAQAAAAAABQAbAAYAAAABAAMAAAAbAAcAAAALAAAAAAAbAAoAAAAAAAMAAAAXAAkAAQAAAAAAAgAIAAUAAQAAAAAAAwAKAAQAAQAAAAAAAgALAAUAAgAEAAQAAAAIAAIAAQAAAAAAAQAIAAMAAAADAAIAAAAJAAUAAQAAAAAABAAKAAIAAQAAAAAAAQAKAAMAAAAAAAIAAAALAAMAAAAAAAEAAAAPAAMAAAAAAAMAAAAPAAYAAAAAAAAAAAA=")
 tile_set = ExtResource("4_k6hqe")
 
 [node name="Props" type="Node2D" parent="."]
@@ -40,6 +41,9 @@ drops = Array[int]([4, 1, 1])
 
 [node name="Chest" parent="Props" instance=ExtResource("12_wiafy")]
 position = Vector2(648, 168)
+
+[node name="Door" parent="Props" instance=ExtResource("7_0bprn")]
+position = Vector2(1128, 555)
 
 [node name="Pickups" type="Node2D" parent="."]
 position = Vector2(364, 441)

@@ -1,14 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://co1odba0xc0kh"]
 
 [ext_resource type="Script" uid="uid://hync3ddx3do3" path="res://scripts/player.gd" id="1_51jd6"]
+[ext_resource type="Texture2D" uid="uid://cjs37unc7vnhy" path="res://assets/sgq_dungeons/elf.png" id="3_5odhx"]
 [ext_resource type="PackedScene" uid="uid://rsxycqet1ofk" path="res://components/sword.tscn" id="3_uapwn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjeyt"]
 radius = 15.0
 height = 44.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51jd6"]
-load_path = "res://.godot/imported/elf.png-67d9cfcf341958fce1ae42c24bef36c4.ctex"
 
 [sub_resource type="Animation" id="Animation_6avrl"]
 length = 0.001
@@ -155,7 +153,6 @@ script = ExtResource("1_51jd6")
 metadata/_edit_group_ = true
 
 [node name="Sword" parent="." instance=ExtResource("3_uapwn")]
-show_hurtbox = true
 metadata/_edit_lock_ = true
 
 [node name="Camera" type="Camera2D" parent="."]
@@ -166,7 +163,7 @@ shape = SubResource("CapsuleShape2D_jjeyt")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
-texture = SubResource("CompressedTexture2D_51jd6")
+texture = ExtResource("3_5odhx")
 hframes = 7
 vframes = 9
 
