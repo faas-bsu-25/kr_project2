@@ -1,0 +1,49 @@
+:root {
+    --accent-color: #cba6f7;
+    --base-color: #1e1e2e;
+    --text-color: #cdd6f4;
+}
+
+html {
+    max-width: 600px;
+    margin: 0 auto;
+
+    font-size: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    color: var(--text-color);
+    background-color: var(--base-color);
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+details {
+    font-size: 0.9rem;
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+summary {
+    margin: 0.2em 0;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+a {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.assets-flex {
+    display: flex;
+    overflow: scroll;
+    column-gap: 1%;
+}
+
+.assets-flex img {
+    height: 10rem;
+}

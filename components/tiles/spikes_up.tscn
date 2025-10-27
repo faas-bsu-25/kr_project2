@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://hl4jcaq2rvmu"]
-
-[ext_resource type="SpriteFrames" uid="uid://b0ynbf0hfatjm" path="res://resources/animated_props-frames.tres" id="1_tufbq"]
-
-[node name="SpikesUp" type="AnimatedSprite2D"]
-sprite_frames = ExtResource("1_tufbq")
-animation = &"spikes_up"
-autoplay = "spikes_up"
