@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://doa2eniiu2edu"]
+[gd_scene load_steps=3 format=3 uid="uid://doa2eniiu2edu"]
 
 [ext_resource type="SpriteFrames" uid="uid://b0ynbf0hfatjm" path="res://resources/animated_props-frames.tres" id="1_8h3q7"]
 
-[node name="SpikesUp" type="AnimatedSprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h3q7"]
+size = Vector2(16, 8)
+
+[node name="SpikesDown" type="StaticBody2D"]
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_8h3q7")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_8h3q7")
 animation = &"spikes_down"
 autoplay = "spikes_down"

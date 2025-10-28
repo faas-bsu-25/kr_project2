@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c1f5w3ipn1sxv"]
+[gd_scene load_steps=11 format=4 uid="uid://c1f5w3ipn1sxv"]
 
 [ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/props/pot.tscn" id="1_8pany"]
 [ext_resource type="PackedScene" uid="uid://co1odba0xc0kh" path="res://components/player.tscn" id="1_jqci3"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://n0mxlbqwlgj0" path="res://resources/walls_tileset.tres" id="3_rfyb7"]
 [ext_resource type="TileSet" uid="uid://cj567rtrdkcdu" path="res://resources/props_tileset.tres" id="4_k6hqe"]
 [ext_resource type="PackedScene" uid="uid://bg13jkbug35ic" path="res://components/props/door.tscn" id="7_0bprn"]
+[ext_resource type="PackedScene" uid="uid://4lvf84pmxtsh" path="res://components/enemy.tscn" id="10_rfyb7"]
 [ext_resource type="PackedScene" uid="uid://cqdvy5wtgtirx" path="res://components/props/chest.tscn" id="12_wiafy"]
 
 [node name="DebugLevel" type="Node2D"]
@@ -37,7 +38,7 @@ tile_set = ExtResource("4_k6hqe")
 
 [node name="Pot" parent="Props" instance=ExtResource("1_8pany")]
 position = Vector2(408, 312)
-drops = Array[int]([4, 1, 1])
+drops = Array[int]([1, 1])
 
 [node name="Chest" parent="Props" instance=ExtResource("12_wiafy")]
 position = Vector2(648, 168)
@@ -84,6 +85,14 @@ pickup_type = 7
 [node name="DelayedBean" parent="Pickups" instance=ExtResource("2_8pany")]
 position = Vector2(57, 61)
 has_pickup_delay = true
+
+[node name="Slime" parent="." instance=ExtResource("10_rfyb7")]
+position = Vector2(1126, 311)
+preset = "Bat"
+health = 1
+drops = null
+speed = 1800.0
+knockback_factor = 10.0
 
 [node name="Player" parent="." instance=ExtResource("1_jqci3")]
 position = Vector2(744, 309)

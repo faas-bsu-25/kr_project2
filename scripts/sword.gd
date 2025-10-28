@@ -31,6 +31,8 @@ func _on_body_entered(body: Node2D) -> void:
 		body.open()
 	elif body is Door:
 		body.unlock()
+	elif body is Enemy:
+		body.change_to(Enemy.State.HIT)
 
 
 func _on_sprite_animation_finished() -> void:
