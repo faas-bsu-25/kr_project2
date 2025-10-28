@@ -6,7 +6,7 @@ The README has been migrated to the repository's GitHub Pages webpage, which can
 | ----------- | ----------- |
 | Level Device 1 | Cracked Block |
 | Level Device 2 | Locked Door |
-| Level Device 3 | Pit/hole |
+| Level Device 3 | Pot |
 | Access Collectible 1 | Bomb |
 | Access Collectible 2 | Key |
 | Level 1 | ... |
@@ -16,4 +16,4 @@ The README has been migrated to the repository's GitHub Pages webpage, which can
 | NPC 2 | ... |
 | Sound | `res://assets/custom/*` |
 | Graphics | Tilesets, asset packs, etc. |
-| Juice | <ul><li>Event Bus pattern</li><li>many sounds</li><li>Animated props (one of which has custom dimensions)</li><li>...</li></ul>
+| Juice | <ul><li>Event Bus pattern</li><li>many sounds</li><li>Animated props (one of which has custom dimensions)</li><li>Tool scripts (see Pickup, Pot, Chest class)</li><li>...</li></ul>
