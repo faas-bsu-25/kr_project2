@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3jiqo3hmkm4t"
-path="res://.godot/imported/walls.png-d5c05b0bd54307f6841616346a6d0743.ctex"
+uid="uid://ba8nf7dmn6occ"
+path="res://.godot/imported/door_alpha.png-26a9400978155b9b270603d957e1673c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sgq_dungeons/tiles/walls.png"
-dest_files=["res://.godot/imported/walls.png-d5c05b0bd54307f6841616346a6d0743.ctex"]
+source_file="res://assets/custom/door_alpha.png"
+dest_files=["res://.godot/imported/door_alpha.png-26a9400978155b9b270603d957e1673c.ctex"]
 
 [params]
 

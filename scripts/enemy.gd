@@ -21,8 +21,8 @@ static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 				_my_anims = _slime_anims
 			"Bat":
 				health = 1
-				speed = 1800.0
-				knockback_factor = 10.0
+				speed = 3000.0
+				knockback_factor = 12.0
 				_my_anims = _bat_anims
 		
 		var update_anims: Callable = func() -> void: 
@@ -31,12 +31,12 @@ static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 		
 		update_anims.call_deferred()
 
-@export var health: int = 3;
-
+@export_group("Drops")
 @export var drops: Array[Pickup.Type] = [Pickup.Type.HALF_HEART]
 @export_range(0, 50, 0.1, "suffix:px") var drop_range: float = 20
 
-@export_group("Movement")
+@export_group("Attributes")
+@export var health: int = 3;
 @export var state: State = State.WAIT
 @export var speed: float = 1200.0
 @export var knockback_factor: float = 8.0
@@ -111,6 +111,8 @@ func _on_sprite_animation_finished() -> void:
 
 
 func _die() -> void:
+	self.visible = false;
+	
 	for drop: Pickup.Type in drops:
 		var random_offset_pos: Vector2 = Vector2(
 			randf_range(-drop_range, drop_range), 
@@ -120,4 +122,8 @@ func _die() -> void:
 		dropped_pickup.position = self.position + random_offset_pos
 		add_sibling.call_deferred(dropped_pickup)
 	
+	$DeathSound.play()
+
+
+func _on_death_sound_finished() -> void:
 	self.queue_free()

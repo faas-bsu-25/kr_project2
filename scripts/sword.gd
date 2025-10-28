@@ -15,6 +15,7 @@ var inactive_preview_color: Color = Color(122, 122, 122, 127)
 @onready var Sprite: AnimatedSprite2D = $Sprite
 @onready var HurtboxPreview: Polygon2D = $HurtboxPreview
 @onready var SwingSound: AudioStreamPlayer = $SwingSound
+@onready var HitSound: AudioStreamPlayer = $HitSound
 
 
 func _process(_delta: float) -> void:
@@ -29,10 +30,11 @@ func _on_body_entered(body: Node2D) -> void:
 		body.shatter()
 	elif body is Chest:
 		body.open()
-	elif body is Door:
+	elif body is LockedDoor:
 		body.unlock()
 	elif body is Enemy:
 		body.change_to(Enemy.State.HIT)
+		HitSound.play()
 
 
 func _on_sprite_animation_finished() -> void:

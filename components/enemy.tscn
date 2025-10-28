@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://4lvf84pmxtsh"]
+[gd_scene load_steps=6 format=3 uid="uid://4lvf84pmxtsh"]
 
 [ext_resource type="Script" uid="uid://b1wsvem8dm5nv" path="res://scripts/enemy.gd" id="1_e0fji"]
 [ext_resource type="SpriteFrames" uid="uid://rropg02sll0k" path="res://resources/enemies-frames.tres" id="1_mo60x"]
+[ext_resource type="AudioStream" uid="uid://bbvrnyulpwwqo" path="res://assets/custom/enemy_death.wav" id="3_hog6v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e0fji"]
 radius = 15.0
@@ -12,25 +13,27 @@ radius = 120.0
 [node name="Enemy" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_e0fji")
-drops = Array[int]([4])
-drop_range = null
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -2)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_mo60x")
-animation = &"bat_hit"
-frame = 4
-frame_progress = 1.0
+animation = &"slime_default"
+frame_progress = 0.5091857
 
 [node name="Shape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e0fji")
 
 [node name="DetectionArea" type="Area2D" parent="."]
+modulate = Color(1, 0.46517068, 0.99670595, 0.34509805)
 
 [node name="DetectionShape" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_mo60x")
 
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hog6v")
+
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="finished" from="DeathSound" to="." method="_on_death_sound_finished"]

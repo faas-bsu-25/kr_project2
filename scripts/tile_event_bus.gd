@@ -21,7 +21,7 @@ func _handle_tile(tile: Node) -> void:
 		tile.queue_free()
 	elif tile is Chest:
 		$ChestOpenSound.play()
-	elif tile is Door:
+	elif tile is LockedDoor:
 		print("door event")
 		print("keys: %d" % PickupEventBus.keys)
 		if PickupEventBus.keys >= 1:

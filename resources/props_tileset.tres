@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://1734kr0qai35" path="res://components/tiles/coin_pile.tscn" id="6_fdkai"]
 [ext_resource type="PackedScene" uid="uid://biocn4agno8co" path="res://components/tiles/campfire.tscn" id="7_feqwq"]
 [ext_resource type="Texture2D" uid="uid://du5ptdfdv7akc" path="res://assets/sgq_dungeons/tiles/animated_props.png" id="8_ltngj"]
-[ext_resource type="Texture2D" uid="uid://bk5ymym68ih5t" path="res://assets/sgq_dungeons/tiles/walls.png" id="9_eo1dh"]
+[ext_resource type="Texture2D" uid="uid://b3jiqo3hmkm4t" path="res://assets/sgq_dungeons/tiles/walls.png" id="9_eo1dh"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_fnvyh"]
 tile_data = PackedInt32Array(0, 786432, 0, 1, 851968, 0)
