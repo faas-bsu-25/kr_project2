@@ -12,8 +12,8 @@ The README has been migrated to the repository's GitHub Pages webpage, which can
 | Level 1 | ... |
 | Level 2 | ... |
 | Start Screen | ... |
-| NPC 1 | ... |
-| NPC 2 | ... |
+| NPC 1 | Slime (slower, less knockback, more health) |
+| NPC 2 | Bat (faster, more knockback, less health) |
 | Sound | `res://assets/custom/*` |
-| Graphics | Tilesets, asset packs, etc. |
-| Juice | <ul><li>Event Bus pattern</li><li>many sounds</li><li>Animated props (one of which has custom dimensions)</li><li>Tool scripts (see Pickup, Pot, Chest class)</li><li>...</li></ul>
+| Graphics | See `res://assets`, `res://resources` for specific files |
+| Juice | <ul><li>Event Bus pattern</li><li>many sounds</li><li>Animated props (one of which has custom dimensions)</li><li>Tool scripts (see Pickup, Pot, Chest, Enemy class)</li><li>`gh-pages` deployment</li><li>Exports, even without tool scripts</li><li>Custom sword hitbox implementation</li><li>...</li></ul>
