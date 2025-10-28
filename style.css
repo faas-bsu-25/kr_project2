@@ -3,6 +3,8 @@
     --base-color: #1e1e2e;
     --subtext-color: #a6adc8;
     --text-color: #cdd6f4;
+
+    --overlay-color: rgba(205, 214, 244, 0.5)
 }
 
 html {
@@ -17,6 +19,16 @@ html {
 
 h2 {
     margin-top: 2rem;
+}
+
+blockquote {
+    margin-left: 0.25rem;
+    padding-left: 1rem;
+    border-left: var(--overlay-color) solid 2px;
+}
+
+ul > li {
+    margin-left: -1.5rem;
 }
 
 details {
@@ -47,7 +59,7 @@ a {
 }
 
 .assets-flex img {
-    height: 10rem;
+    height: 12rem;
 }
 
 .flex {
