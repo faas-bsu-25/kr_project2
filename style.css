@@ -30,6 +30,9 @@ blockquote {
 ul > li {
     margin-left: -1.5rem;
 }
+li img {
+    width: 1rem;
+}
 
 details {
     margin: 0.5rem 0;
