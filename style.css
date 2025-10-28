@@ -27,11 +27,8 @@ blockquote {
     border-left: var(--overlay-color) solid 2px;
 }
 
-ul > li {
+ul>li {
     margin-left: -1.5rem;
-}
-li img {
-    width: 1rem;
 }
 
 details {
