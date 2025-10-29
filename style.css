@@ -35,6 +35,15 @@ code {
     border-radius: 0.2em;
 }
 
+h1 > a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+h1 > a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 h2 {
     margin-top: 2rem;
 }
