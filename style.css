@@ -1,10 +1,19 @@
 :root {
-    --accent-color: #cba6f7;
-    --base-color: #1e1e2e;
-    --subtext-color: #a6adc8;
-    --text-color: #cdd6f4;
+    /* Colors from: https://catppuccin.com/palette/#Mocha */
 
-    --overlay-color: rgba(205, 214, 244, 0.5)
+    /* mauve */
+    --accent-color: #cba6f7;
+    /* base */
+    --base-color: #1e1e2e;
+    /* mantle */
+    --code-color: #181825;
+    /* subtext 0 */
+    --subtext-color: #a6adc8;
+    /* text */
+    --text-color: rgb(205, 214, 244);
+
+    /* text color with transparency */
+    --overlay-color: rgba(205, 214, 244, 0.75)
 }
 
 html {
@@ -17,6 +26,15 @@ html {
     background-color: var(--base-color);
 }
 
+code {
+    padding: 0.33em;
+
+    font-family: monospace;
+
+    background-color: var(--code-color);
+    border-radius: 0.2em;
+}
+
 h2 {
     margin-top: 2rem;
 }
@@ -27,11 +45,16 @@ blockquote {
     border-left: var(--overlay-color) solid 2px;
 }
 
-ul>li {
-    margin-left: -1.5rem;
+li {
+    margin-left: -1.5em;
+}
+
+blockquote li.nested {
+    margin-left: -3.25em;
 }
 
 details {
+    max-width: 100%;
     margin: 0.5rem 0;
 
     font-size: 0.9rem;
@@ -52,18 +75,39 @@ a {
     cursor: pointer;
 }
 
-.assets-flex {
-    display: flex;
+.assets {
+    padding-bottom: 1rem;
     overflow: scroll;
+
+    display: flex;
     column-gap: 1%;
 }
 
-.assets-flex img {
+.assets img {
     height: 12rem;
 }
 
-.flex {
+.assets p {
+    max-width: 95%;
+    margin: 0 auto;
+
+    text-align: center;
+    /* text-align: justify;
+    text-align-last: center; */
+
+    color: var(--subtext-color);
+
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+.assets .item:nth-of-type(2), .assets .item:nth-of-type(3) {
+    text-decoration: line-through solid var(--subtext-color);
+}
+
+section:nth-of-type(2) div.flex {
     display: flex;
+    flex-direction: row;
 }
 
 .links-container {
@@ -77,6 +121,25 @@ span {
     font-style: italic;
 }
 
-ul {
+ul,
+ol {
     line-height: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 0.8em;
+    }
+
+    blockquote li {
+        margin-left: -3em;
+    }
+
+    li.nested {
+        margin-left: -5.5em;
+    }
+
+    section:nth-of-type(2) div.flex {
+        flex-direction: column;
+    }
 }

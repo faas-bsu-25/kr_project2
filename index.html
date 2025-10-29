@@ -16,11 +16,11 @@
                     <ul>
                         <li>3 level devices (doors, ladder, spring)</li>
                         <ul>
-                            <li>At least one must communicate with the game singleton</li>
+                            <li class="nested">At least one must communicate with the game singleton</li>
                         </ul>
                         <li>1 collectible that is used to control access to other parts of the level</li>
                         <ul>
-                            <li>Ammo, keys, gems</li>
+                            <li class="nested">Ammo, keys, gems</li>
                         </ul>
                         <li>Playable character (use Godot's build in script to start if making a platformer)</li>
                         <li>2 levels minimum</li>
@@ -46,31 +46,49 @@
         <main>
             <section>
                 <h2>Assets Used</h2>
-                <div class="assets-flex">
-                    <a href="https://toadzillart.itch.io/dungeons-pack" target="_blank">
-                        <img
-                            src="https://img.itch.zone/aW1nLzE1MzE3ODYxLmdpZg==/original/R9Cmel.gif"
-                            alt='"Super Gameboy Quest - Dungeons pack" by Toadzillart on itch.io'
-                        />
-                    </a>
-                    <a href="https://toadzillart.itch.io/Monster-pack" target="_blank">
-                        <img
-                            src="https://img.itch.zone/aW1nLzE1MzE3ODc0LmdpZg==/original/ZywAS6.gif"
-                            alt='"Super Gameboy Quest - Enemies pack" by Toadzillart on itch.io'
-                        />
-                    </a>
-                    <a href="https://toadzillart.itch.io/ui-pack" target="_blank">
-                        <img
-                            src="https://img.itch.zone/aW1nLzE1MzE3ODgwLmdpZg==/original/KsyOhU.gif"
-                            alt='"Super Gameboy Quest - UI pack" by Toadzillart on itch.io'
-                        />
-                    </a>
-                    <a href="https://pixel-boy.itch.io/icon-godot-node" target="_blank">
-                        <img
-                            src="https://img.itch.zone/aW1nLzE3MTM0MjcwLnBuZw==/315x250%23c/er89Ot.png"
-                            alt='"Icon Node For Godot" by pixel-boy on itch.io'
-                        />
-                    </a>
+                <div class="assets">
+                    <div class="item">
+                        <a href="https://toadzillart.itch.io/dungeons-pack" target="_blank">
+                            <img
+                                src="https://img.itch.zone/aW1nLzE1MzE3ODYxLmdpZg==/original/R9Cmel.gif"
+                                alt='"Super Gameboy Quest - Dungeons pack" by Toadzillart on itch.io'
+                            />
+                        </a>
+                        <p>
+                            Nearly all non-custom assets, including tilesets, spritesheets, items, and more.
+                            Additionally, the <code>DoorTP</code> sprite is an edited tile from this pack.
+                        </p>
+                    </div>
+                    <div class="item">
+                        <a href="https://toadzillart.itch.io/Monster-pack" target="_blank">
+                            <img
+                                src="https://img.itch.zone/aW1nLzE1MzE3ODc0LmdpZg==/original/ZywAS6.gif"
+                                alt='"Super Gameboy Quest - Enemies pack" by Toadzillart on itch.io'
+                            />
+                        </a>
+                        <p>Not yet used. Essentially on standby.</p>
+                    </div>
+                    <div class="item">
+                        <a href="https://toadzillart.itch.io/ui-pack" target="_blank">
+                            <img
+                                src="https://img.itch.zone/aW1nLzE1MzE3ODgwLmdpZg==/original/KsyOhU.gif"
+                                alt='"Super Gameboy Quest - UI pack" by Toadzillart on itch.io'
+                            />
+                        </a>
+                        <p>Anticipating use once I begin UI work.</p>
+                    </div>
+                    <div class="item">
+                        <a href="https://pixel-boy.itch.io/icon-godot-node" target="_blank">
+                            <img
+                                src="https://img.itch.zone/aW1nLzE3MTM0MjcwLnBuZw==/315x250%23c/er89Ot.png"
+                                alt='"Icon Node For Godot" by pixel-boy on itch.io'
+                            />
+                        </a>
+                        <p>
+                            Used for nearly all script-object types in this project. Though it only shows in my editor,
+                            I really enjoy it.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -150,23 +168,42 @@
                                     ><code>Callable.call_deferred(...args)</code></a
                                 >
                             </li>
+                            <li>
+                                <a
+                                    href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_format_string.html"
+                                    target="_blank"
+                                    >GDScript format strings</a
+                                >
+                            </li>
                         </ul>
                     </div>
                     <div class="links-container">
                         <h3>Other Sites</h3>
                         <ul>
                             <li>
-                                <img src="https://placehold.co/256x256/313244/cdd6f4/png?text=P" alt="Placehold.co" width="16px"/>
+                                <img
+                                    src="https://placehold.co/256x256/313244/cdd6f4/png?text=P"
+                                    alt="Placehold.co"
+                                    width="16px"
+                                />
                                 <a href="https://placehold.co">Placehold</a> (used for color previews in Notes)
                             </li>
                             <li>
-                                <img src="images/youtube.png" alt="YouTube" width="16px">
-                                <a href="https://www.youtube.com/watch?v=H_qn6A_RIFE">How to Use Scene Tiles in Godot</a>
+                                <img src="images/youtube.png" alt="YouTube" width="16px" />
+                                <a href="https://www.youtube.com/watch?v=H_qn6A_RIFE"
+                                    >How to Use Scene Tiles in Godot</a
+                                >
                                 (a short and sweet rundown on Scene Tiles and scripts)
                             </li>
                             <li>
-                                <img src="https://avatars.githubusercontent.com/u/93489351?s=256&v=4" alt="Catppuccin" width="16px">
-                                <a href="https://catppuccin.com/palette" alt="catppuccin palette">Catppuccin Palette [Mocha]</a>
+                                <img
+                                    src="https://avatars.githubusercontent.com/u/93489351?s=256&v=4"
+                                    alt="Catppuccin"
+                                    width="16px"
+                                />
+                                <a href="https://catppuccin.com/palette" alt="catppuccin palette"
+                                    >Catppuccin Palette [Mocha]</a
+                                >
                                 (a color palette used to design the css for this page)
                             </li>
                         </ul>
@@ -195,8 +232,8 @@
                             <p>
                                 But trying to make a whole game like this? It's so hard to find a good way to write this
                                 code. I was about to make subclasses of a
-                                <code>PickupItem</code> where the scripts only contained class names. How on earth did my
-                                line of reasoning get to <i>that?</i>
+                                <code>PickupItem</code> where the scripts only contained class names. How on earth did
+                                my line of reasoning get to <i>that?</i>
                             </p>
                         </blockquote>
                     </details>
@@ -223,22 +260,22 @@
                         <summary>Singletons, "Managers", and event scope (10/12)</summary>
                         <blockquote>
                             <p>
-                                I spent a lot of time figuring out how I wanted to approach the singleton pattern for this
-                                game. Godot features a built-in singleton system via "Project Settings > Globals" aka
-                                "Autoload"
+                                I spent a lot of time figuring out how I wanted to approach the singleton pattern for
+                                this game. Godot features a built-in singleton system via "Project Settings > Globals"
+                                aka "Autoload"
                             </p>
                             <p>
                                 I went back and forth on whether to make each specialized singleton a child node of a
-                                higher-level GameManager class. Ultimately I decided against it. While asking the BSU Game
-                                Dev Discord server about putting all signals in one file or putting related signals into
-                                each manager. Manager. Dr. Gestwicki was kind enough to
+                                higher-level GameManager class. Ultimately I decided against it. While asking the BSU
+                                Game Dev Discord server about putting all signals in one file or putting related signals
+                                into each manager. Manager. Dr. Gestwicki was kind enough to
                                 <a
                                     href="https://discord.com/channels/829049561867485203/829049561867485206/1426997915569623140"
                                     target="_blank"
                                     >point out</a
                                 >
-                                that the word "Manager" is meaningless. He offered, "The name 'manager' means 'I don't know
-                                what this does :)" Ánd, he's right. This prompted me to rename my singletons. Exit,
+                                that the word "Manager" is meaningless. He offered, "The name 'manager' means 'I don't
+                                know what this does :)" Ánd, he's right. This prompted me to rename my singletons. Exit,
                                 <code>PickupManager</code>. Enter, <code>PickupEventBus</code>. ✨
                             </p>
                         </blockquote>
@@ -255,8 +292,8 @@
                                 mouse position, but it was horribly inconsistent.
                             </p>
                             <p>
-                                I eventually decided for the sword to swing in the last axis movement direction. This vector
-                                is only updated if the player is actively moving at the time of the check.
+                                I eventually decided for the sword to swing in the last axis movement direction. This
+                                vector is only updated if the player is actively moving at the time of the check.
                             </p>
                         </blockquote>
                     </details>
@@ -267,8 +304,8 @@
                         <summary>(ceramic) Pot issues (10/13 🎂)</summary>
                         <blockquote>
                             <p>
-                                Remember that issue I had where I needed to defer the call to change the pickup's animation
-                                in accordance with a change of type......
+                                Remember that issue I had where I needed to defer the call to change the pickup's
+                                animation in accordance with a change of type......
                             </p>
                             <p>
                                 Yeah it was really hard to get the pot to spawn it because once again the pot made the
@@ -288,19 +325,23 @@
                                 click, boom, pot. HOWEVER...
                             </p>
                             <p>
-                                Apparently, if a scene tile has export variables, they cannot be accessed when the scene is
-                                placed as a tile. For something like floor spikes which are generally self-contained, this
-                                is fine. For the pots, on the other hand, they are completely reliant on editable drops. A
-                                dealbreaker.
+                                Apparently, if a scene tile has export variables, they cannot be accessed when the scene
+                                is placed as a tile. For something like floor spikes which are generally self-contained,
+                                this is fine. For the pots, on the other hand, they are completely reliant on editable
+                                drops. A dealbreaker.
                             </p>
                             <p>
-                                Fortunately, smart snap exists. You know how, as you move elements in a slide on PowerPoint,
-                                those orange lines will snap your element to align with the top, bottom, or middle of other
-                                elements? That's what smart snap does. Generally, it makes lining up hand-placed scenes with
-                                their tile friends much easier.
+                                Fortunately, smart snap exists. You know how, as you move elements in a slide on
+                                PowerPoint, those orange lines will snap your element to align with the top, bottom, or
+                                middle of other elements? That's what smart snap does. Generally, it makes lining up
+                                hand-placed scenes with their tile friends much easier.
                             </p>
                             <p>This pot, despite looking perfectly like a tile....is entirely separate. Yay.</p>
-                            <img src="images/snapped_pot.png" alt="scene with a pot lined up with a tile" height="250px" />
+                            <img
+                                src="images/snapped_pot.png"
+                                alt="scene with a pot lined up with a tile"
+                                height="250px"
+                            />
                         </blockquote>
                     </details>
                 </article>
@@ -325,11 +366,11 @@
                                     announce which tiles it exploded.
                                 </li>
                                 <li>
-                                    The bomb can't trust the <code>TileEventBus</code> to <code>queue_free()</code> it. For
-                                    some really weird reason, after the first bomb explodes it gets unreliable, and each
-                                    bomb added to the scene before the previous is freed causes massive delays in the
-                                    <code>TileEventBus</code> whether the bomb announced any tiles or not. And heaven forbid
-                                    the bombs try to blow up the other bombs.
+                                    The bomb can't trust the <code>TileEventBus</code> to <code>queue_free()</code> it.
+                                    For some really weird reason, after the first bomb explodes it gets unreliable, and
+                                    each bomb added to the scene before the previous is freed causes massive delays in
+                                    the <code>TileEventBus</code> whether the bomb announced any tiles or not. And
+                                    heaven forbid the bombs try to blow up the other bombs.
                                 </li>
                             </ul>
                             <p>
@@ -340,9 +381,9 @@
                             <p>
                                 <sup
                                     ><i>
-                                        As a side note, I was going to make explosion particles, but it was too hard to try
-                                        to fit them to the aesthetic. I settled for a neat red fade-in that intensifies the
-                                        closer the bomb gets to exploding. I'm proud of that one.
+                                        As a side note, I was going to make explosion particles, but it was too hard to
+                                        try to fit them to the aesthetic. I settled for a neat red fade-in that
+                                        intensifies the closer the bomb gets to exploding. I'm proud of that one.
                                     </i></sup
                                 >
                             </p>
@@ -352,7 +393,7 @@
 
                 <article>
                     <details>
-                        <summary>Bouts of Burnout and migrating Readme (10/27)</summary>
+                        <summary>Bouts of Burnout and Migrating Readme (10/27)</summary>
                         <blockquote>
                             <p>
                                 Since the start, I have written my README in HTML. The "Assets Used" section uses images
@@ -362,13 +403,13 @@
                             </p>
                             <p>
                                 As for the burnout, I haven't touched this project in over a week. I had set out to get
-                                alllll my other homework done last week to leave all the time needed to crank out the rest
-                                of this project. And then I just... didn't touch it...
+                                alllll my other homework done last week to leave all the time needed to crank out the
+                                rest of this project. And then I just... didn't touch it...
                             </p>
                             <p>
-                                There's a lot that goes into that. Longstanding issues, the death of a friend over this past
-                                weekend, and old habits dying hard. I will get it done. I will find a way. I always do. Just
-                                maybe not right now.
+                                There's a lot that goes into that. Longstanding issues, the death of a friend over this
+                                past weekend, and old habits dying hard. I will get it done. I will find a way. I always
+                                do. Just maybe not right now.
                             </p>
                         </blockquote>
                     </details>
@@ -381,11 +422,11 @@
                         </summary>
                         <blockquote>
                             <p>
-                                I've had my doubts thus far about how clean my code is, but the process of making an enemy
-                                class went really well. The Enemy combines the preset functions granted unto Pickups by
-                                their tool script as well as the loot drop system granted unto Pots by <i>their</i> tool
-                                script. My experience with knowing when to use <code>Callable#call_deferred()</code> has
-                                made the whole ordeal far easier to debug.
+                                I've had my doubts thus far about how clean my code is, but the process of making an
+                                enemy class went really well. The Enemy combines the preset functions granted unto
+                                Pickups by their tool script as well as the loot drop system granted unto Pots by
+                                <i>their</i> tool script. My experience with knowing when to use
+                                <code>Callable#call_deferred()</code> has made the whole ordeal far easier to debug.
                             </p>
                             <p>I am quite pleased. We're almost onto real level design and beyond!</p>
                         </blockquote>
@@ -394,22 +435,23 @@
 
                 <article>
                     <details>
-                        <summary>
-                            Door Teleportation Magic (also 10/28)
-                        </summary>
+                        <summary>Door Teleportation Magic (also 10/28)</summary>
                         <blockquote>
+                            <p>A "door" overlays the door tile from the wall and does a few things.</p>
+                            <ol>
+                                <li>Renders above player (wall tiles are under the player)</li>
+                                <li>Blocks the player from leaving the room entirely</li>
+                                <li>
+                                    Once the player goes far enough through, the door teleports the player to the linked
+                                    door.
+                                </li>
+                            </ol>
                             <p>
-                                A "door" overlays the door tile from the wall and does a few things.
-                                <ol>
-                                    <li>Renders above player (wall tiles are under the player)</li>
-                                    <li>Blocks the player from leaving the room entirely</li>
-                                    <li>Once the player goes far enough through, the door teleports the player to the linked door.</li>
-                                </ol>
-                                The tool scripts for this were not having a good time trying to automate the doubly-linked initialization. I aimed for complete automation and settled for a tool button.
+                                The tool scripts for this were not having a good time trying to automate the
+                                doubly-linked initialization. I aimed for complete automation and settled for a tool
+                                button.
                             </p>
-                            <p>
-                                This is...more or less the last piece needed to create the levels. Wild.
-                            </p>
+                            <p>This is...more or less the last piece needed to create the levels. Wild.</p>
                         </blockquote>
                     </details>
                 </article>
