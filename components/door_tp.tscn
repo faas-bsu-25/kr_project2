@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dmnxmoyo7xp1m"]
 
 [ext_resource type="Texture2D" uid="uid://ba8nf7dmn6occ" path="res://assets/custom/door_alpha.png" id="1_6askj"]
-[ext_resource type="Script" uid="uid://c5x4d1b5usyrj" path="res://components/door_tp.gd" id="1_ldbcg"]
+[ext_resource type="Script" uid="uid://c5x4d1b5usyrj" path="res://scripts/door_tp.gd" id="1_ldbcg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_6askj"]
 a = Vector2(-24, -48)

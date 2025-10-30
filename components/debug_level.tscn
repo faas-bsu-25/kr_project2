@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c1f5w3ipn1sxv"]
+[gd_scene load_steps=13 format=4 uid="uid://c1f5w3ipn1sxv"]
 
 [ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/props/pot.tscn" id="1_8pany"]
 [ext_resource type="PackedScene" uid="uid://co1odba0xc0kh" path="res://components/player.tscn" id="1_jqci3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bg13jkbug35ic" path="res://components/props/locked_door.tscn" id="7_0bprn"]
 [ext_resource type="PackedScene" uid="uid://4lvf84pmxtsh" path="res://components/enemy.tscn" id="10_rfyb7"]
 [ext_resource type="PackedScene" uid="uid://dmnxmoyo7xp1m" path="res://components/door_tp.tscn" id="11_k6hqe"]
+[ext_resource type="PackedScene" uid="uid://c4eufwc3kwpib" path="res://components/game_hud.tscn" id="12_mqwui"]
 [ext_resource type="PackedScene" uid="uid://cqdvy5wtgtirx" path="res://components/props/chest.tscn" id="12_wiafy"]
 
 [node name="DebugLevel" type="Node2D"]
@@ -107,6 +108,14 @@ has_pickup_delay = true
 
 [node name="Slime" parent="." instance=ExtResource("10_rfyb7")]
 position = Vector2(1126, 311)
+preset = "Bat"
+health = 1
+speed = 3000.0
+knockback_factor = 12.0
 
 [node name="Player" parent="." instance=ExtResource("1_jqci3")]
 position = Vector2(744, 309)
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="GameHUD" parent="Canvas" instance=ExtResource("12_mqwui")]

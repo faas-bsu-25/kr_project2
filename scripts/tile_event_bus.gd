@@ -22,16 +22,12 @@ func _handle_tile(tile: Node) -> void:
 	elif tile is Chest:
 		$ChestOpenSound.play()
 	elif tile is LockedDoor:
-		print("door event")
-		print("keys: %d" % PickupEventBus.keys)
 		if PickupEventBus.keys >= 1:
+			PickupEventBus.use_key.emit()
 			$DoorOpenSound.play()
-			PickupEventBus.keys -= 1
 			tile.queue_free()
-			print("open")
 		else:
 			$DoorLockedSound.play()
-			print("locked")
 
 
 func _handle_explosion(tile: Node) -> void:

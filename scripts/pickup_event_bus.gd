@@ -5,6 +5,8 @@ extends Node
 
 
 signal picked_up(type: Pickup.Type)
+signal use_bomb
+signal use_key
 
 var keys: int = 0;
 var bombs: int = 0;
@@ -12,7 +14,8 @@ var bombs: int = 0;
 
 func _ready() -> void:
 	picked_up.connect(_handle_pickup)
-	pass
+	use_bomb.connect(func() -> void: bombs -= 1)
+	use_key.connect(func() -> void: keys -= 1)
 
 
 func _handle_pickup(type: Pickup.Type) -> void:
