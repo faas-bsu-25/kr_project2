@@ -55,6 +55,10 @@ blockquote {
     border-left: var(--overlay-color) solid 2px;
 }
 
+blockquote p {
+    line-height: 1.33rem;
+}
+
 li {
     margin-left: -1.5em;
 }
