@@ -51,7 +51,7 @@
         </header>
 
         <main>
-            <section>
+            <section class="assets">
                 <h2>Assets Used</h2>
                 <div class="assets">
                     <div class="item">
@@ -105,7 +105,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="links">
                 <h2>Useful Links</h2>
                 <div class="flex">
                     <div class="links-container">
@@ -194,37 +194,32 @@
                         <h3>Other Sites</h3>
                         <ul>
                             <li>
-                                <img
-                                    src="https://placehold.co/256x256/313244/cdd6f4/png?text=P"
-                                    alt="Placehold.co"
-                                    width="16px"
-                                />
-                                <a href="https://placehold.co">Placehold</a> (used for color previews in Notes)
+                                <img src="https://placehold.co/256x256/313244/cdd6f4/png?text=P" alt="Placehold.co" />
+                                <a href="https://placehold.co">Placehold</a><br />
+                                <span class="subtext">(used for color previews in Notes)</span>
                             </li>
                             <li>
-                                <img src="images/youtube.png" alt="YouTube" width="16px" />
-                                <a href="https://www.youtube.com/watch?v=H_qn6A_RIFE"
-                                    >How to Use Scene Tiles in Godot</a
-                                >
-                                (a short and sweet rundown on Scene Tiles and scripts)
+                                <img src="images/youtube.png" alt="YouTube" />
+                                <a href="https://www.youtube.com/watch?v=H_qn6A_RIFE">How to Use Scene Tiles in Godot</a
+                                ><br />
+                                <span class="subtext">(a short and sweet rundown on Scene Tiles and scripts)</span>
                             </li>
                             <li>
                                 <img
                                     src="https://avatars.githubusercontent.com/u/93489351?s=256&v=4"
                                     alt="Catppuccin"
-                                    width="16px"
                                 />
                                 <a href="https://catppuccin.com/palette" alt="catppuccin palette"
                                     >Catppuccin Palette [Mocha]</a
-                                >
-                                (a color palette used to design the css for this page)
+                                ><br />
+                                <span class="subtext">(a color palette used to design the css for this page)</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section class="journal">
                 <h2>Development Journal</h2>
                 <sup
                     ><i
@@ -431,7 +426,8 @@
                 <article>
                     <details>
                         <summary>
-                            The Enemy of my Enemy is my Code (10/28 <span>And definitely not during class...</span>)
+                            The Enemy of my Enemy is my Code (10/28)
+                            <span class="subtext">And definitely not during class...</span>
                         </summary>
                         <blockquote>
                             <p>
@@ -468,35 +464,117 @@
                         </blockquote>
                     </details>
                 </article>
+
+                <article>
+                    <details>
+                        <summary>TextureRects and GUI Issues (10/30)</summary>
+                        <blockquote>
+                            <p>
+                                This morning, I asked Dr. Faas about the best way to animate a control element.
+                                Basically, I wanted an AnimatedSprite2D as a control so that its position conforms to
+                                anchors and parent containers. I then spent a good half hour trying to use an
+                                AnimationTexture. First of all, it's very tedious and I hate the way adding frames has
+                                to work. SECOND of all, I had been doing the frames as AtlasTextures,
+                                which...AnimationTexture frames
+                                <a
+                                    href="https://docs.godotengine.org/en/stable/classes/class_animatedtexture.html#description"
+                                    target="_blank"
+                                    >specifically do not support</a
+                                >.
+                            </p>
+                            <p>
+                                Then I had issues with connecting global events to my GUI. Some (and only some) events
+                                passed a parameter, so I had to find out the hardway that GDScript does not support
+                                overloading methods/functions. Overriding via inhertance, sure. But not overloading.
+                            </p>
+                        </blockquote>
+                    </details>
+                </article>
             </section>
 
-            <section>
+            <section class="notes">
                 <h2>Notes</h2>
-                <h3>Color Palette</h3>
-                <p>The Super Gameboy Quest assets feature the following 2-bit color palette:</p>
-                <ul>
-                    <li>
-                        <img src="https://placehold.co/15x15/d4d29b/d4d29b.png" alt="" />
-                        <code>#d4d29b</code>
-                    </li>
-                    <li>
-                        <img src="https://placehold.co/15x15/78a46a/78a46a.png" alt="" />
-                        <code>#78a46a</code>
-                    </li>
-                    <li>
-                        <img src="https://placehold.co/15x15/5e8549/5e8549.png" alt="" />
-                        <code>#5e8549</code>
-                    </li>
-                    <li>
-                        <img src="https://placehold.co/15x15/584422/584422.png" alt="" />
-                        <code>#584422</code>
-                    </li>
-                </ul>
-                <h3>Site Updates</h3>
-                <p>
-                    If the site isn't reflecting commits in a new deployment, try refreshing the page manually. Even if
-                    the site has been closed since before the deployment
-                </p>
+
+                <article>
+                    <h3>Color Palette</h3>
+                    <p>The Super Gameboy Quest assets feature the following 2-bit color palette:</p>
+                    <ul>
+                        <li>
+                            <img src="https://placehold.co/15x15/d4d29b/d4d29b.png" alt="" />
+                            <code>#d4d29b</code>
+                        </li>
+                        <li>
+                            <img src="https://placehold.co/15x15/78a46a/78a46a.png" alt="" />
+                            <code>#78a46a</code>
+                        </li>
+                        <li>
+                            <img src="https://placehold.co/15x15/5e8549/5e8549.png" alt="" />
+                            <code>#5e8549</code>
+                        </li>
+                        <li>
+                            <img src="https://placehold.co/15x15/584422/584422.png" alt="" />
+                            <code>#584422</code>
+                        </li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Site Updates</h3>
+                    <p>
+                        If the site isn't reflecting commits in a new deployment, try refreshing the page manually. Even
+                        if the site has been closed since before the deployment
+                    </p>
+                </article>
+
+                <article class="always-do">
+                    <h3>Things I always do when working in Godot</h3>
+                    <ul>
+                        <li>
+                            I always have the following tabs open in my browser when working on a Godot project:
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+                                        target="_blank"
+                                        >GDScript Reference</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html"
+                                        target="_blank"
+                                        >GDScript Style Guide</a
+                                    >
+                                    <span class="subtext">
+                                        (usually the
+                                        <a
+                                            href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order"
+                                            target="_blank"
+                                            >Code order</a
+                                        >
+                                        section.)
+                                    </span>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html"
+                                        target="_blank"
+                                        >GDScript ExportedProperties</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            When I create a project, I go into advanced debug settings and enable warnings relating to
+                            <a
+                                href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html#how-to-use-static-typing"
+                                target="_blank"
+                                >static typing</a
+                            >.
+                        </li>
+                        <li>...</li>
+                    </ul>
+                </article>
             </section>
         </main>
     </body>
