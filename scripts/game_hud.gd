@@ -3,8 +3,8 @@ class_name GameHUD
 extends Control
 
 
-const BOMB_ICON_SCENE: PackedScene = preload("res://components/bomb_icon.tscn")
-const KEY_ICON_SCENE: PackedScene = preload("res://components/keys_icon.tscn")
+const BOMB_ICON_SCENE: PackedScene = preload("res://components/gui/bomb_icon.tscn")
+const KEY_ICON_SCENE: PackedScene = preload("res://components/gui/keys_icon.tscn")
 
 @onready var BombsBox: HBoxContainer = $BombsAndKeys/Bombs
 @onready var KeysBox: HBoxContainer = $BombsAndKeys/Keys

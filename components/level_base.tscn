@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://dkp02if42mhss"]
+
+[ext_resource type="Script" uid="uid://dex2a2ava664g" path="res://scripts/base_level.gd" id="1_0kcpw"]
+[ext_resource type="AudioStream" uid="uid://domt8dqmrx35b" path="res://assets/music/xDeviruchi - Mysterious Dungeon.wav" id="2_t0e4o"]
+[ext_resource type="Script" uid="uid://bjkw547hpsrn4" path="res://scripts/loop_sound.gd" id="3_8xg5m"]
+[ext_resource type="TileSet" uid="uid://0u6oub0fw12h" path="res://resources/ground_tileset.tres" id="4_evtpn"]
+[ext_resource type="TileSet" uid="uid://dsvy81bsrgger" path="res://resources/surground_tileset.tres" id="5_raula"]
+[ext_resource type="TileSet" uid="uid://n0mxlbqwlgj0" path="res://resources/walls_tileset.tres" id="6_kqo2x"]
+[ext_resource type="TileSet" uid="uid://cj567rtrdkcdu" path="res://resources/props_tileset.tres" id="7_oyd2g"]
+[ext_resource type="PackedScene" uid="uid://co1odba0xc0kh" path="res://components/player.tscn" id="8_wkcmx"]
+[ext_resource type="PackedScene" uid="uid://c4eufwc3kwpib" path="res://components/gui/game_hud.tscn" id="9_ru0e3"]
+
+[node name="AbstractLevelBase" type="Node2D"]
+script = ExtResource("1_0kcpw")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_t0e4o")
+volume_db = -5.0
+autoplay = true
+playback_type = 1
+script = ExtResource("3_8xg5m")
+
+[node name="Tiles" type="Node2D" parent="."]
+scale = Vector2(3, 3)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="TileMapLayer" parent="Tiles"]
+tile_set = ExtResource("4_evtpn")
+
+[node name="Surground" type="TileMapLayer" parent="Tiles"]
+tile_set = ExtResource("5_raula")
+
+[node name="Walls" type="TileMapLayer" parent="Tiles"]
+tile_set = ExtResource("6_kqo2x")
+
+[node name="Props" type="TileMapLayer" parent="Tiles"]
+tile_set = ExtResource("7_oyd2g")
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Pickups" type="Node2D" parent="."]
+position = Vector2(364, 441)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("8_wkcmx")]
+position = Vector2(744, 309)
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="GameHUD" parent="Canvas" instance=ExtResource("9_ru0e3")]
+metadata/_edit_lock_ = true
+
+[connection signal="finished" from="Music" to="Music" method="_on_finished"]

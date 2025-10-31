@@ -1,6 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://n0mxlbqwlgj0"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://n0mxlbqwlgj0"]
 
 [ext_resource type="Texture2D" uid="uid://b3jiqo3hmkm4t" path="res://assets/sgq_dungeons/tiles/walls.png" id="1_4fdok"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_4fdok"]
+tile_data = PackedInt32Array(0, 65536, 3, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 0, 2, 1, 655360, 0, 2, 720896, 0, 3, 786432, 0, 4, 327680, 0, 5, 196608, 0, 6, 524288, 0, 7, 196608, 0, 8, 196608, 0, 9, 0, 0, 65545, 196608, 2, 131081, 327680, 1, 196617, 196608, 2, 262153, 196608, 2, 327689, 196608, 3, 11, 65536, 3, 65547, 65536, 0, 131083, 65536, 0, 196619, 65536, 0, 262155, 65536, 0, 327691, 65536, 0, 393227, 65536, 0, 458763, 65536, 0, 524299, 65536, 0, 589835, 0, 2, 12, 196608, 0, 13, 327680, 0, 14, 196608, 0, 15, 655360, 0, 16, 720896, 0, 17, 786432, 0, 18, 196608, 0, 19, 327680, 0, 20, 196608, 0, 21, 0, 0, 65557, 196608, 2, 131093, 196608, 2, 196629, 196608, 2, 262165, 196608, 2, 327701, 196608, 2, 393237, 196608, 2, 458773, 196608, 2, 524309, 196608, 2, 589845, 196608, 3)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nhro"]
 texture = ExtResource("1_4fdok")
@@ -249,3 +252,4 @@ texture = ExtResource("1_4fdok")
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0nhro")
+pattern_0 = SubResource("TileMapPattern_4fdok")
