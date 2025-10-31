@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=4 uid="uid://c1f5w3ipn1sxv"]
+[gd_scene load_steps=15 format=4 uid="uid://c1f5w3ipn1sxv"]
 
 [ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/props/pot.tscn" id="1_8pany"]
 [ext_resource type="PackedScene" uid="uid://co1odba0xc0kh" path="res://components/player.tscn" id="1_jqci3"]
 [ext_resource type="TileSet" uid="uid://0u6oub0fw12h" path="res://resources/ground_tileset.tres" id="1_w3rk7"]
+[ext_resource type="AudioStream" uid="uid://domt8dqmrx35b" path="res://assets/music/xDeviruchi - Mysterious Dungeon.wav" id="1_wiafy"]
 [ext_resource type="TileSet" uid="uid://dsvy81bsrgger" path="res://resources/surground_tileset.tres" id="2_0bprn"]
 [ext_resource type="PackedScene" uid="uid://blqmiaat7hryk" path="res://components/pickup.tscn" id="2_8pany"]
+[ext_resource type="Script" uid="uid://bjkw547hpsrn4" path="res://scripts/loop_sound.gd" id="2_v4u84"]
 [ext_resource type="TileSet" uid="uid://n0mxlbqwlgj0" path="res://resources/walls_tileset.tres" id="3_rfyb7"]
 [ext_resource type="TileSet" uid="uid://cj567rtrdkcdu" path="res://resources/props_tileset.tres" id="4_k6hqe"]
 [ext_resource type="PackedScene" uid="uid://bg13jkbug35ic" path="res://components/props/locked_door.tscn" id="7_0bprn"]
@@ -15,6 +17,13 @@
 
 [node name="DebugLevel" type="Node2D"]
 metadata/_edit_lock_ = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_wiafy")
+volume_db = -5.0
+autoplay = true
+playback_type = 1
+script = ExtResource("2_v4u84")
 
 [node name="Tiles" type="Node2D" parent="."]
 scale = Vector2(3, 3)
@@ -122,3 +131,5 @@ position = Vector2(744, 309)
 
 [node name="GameHUD" parent="Canvas" instance=ExtResource("12_mqwui")]
 metadata/_edit_lock_ = true
+
+[connection signal="finished" from="Music" to="Music" method="_on_finished"]

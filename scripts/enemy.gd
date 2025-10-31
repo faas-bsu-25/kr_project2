@@ -21,8 +21,8 @@ static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 				_my_anims = _slime_anims
 			"Bat":
 				health = 1
-				speed = 3000.0
-				knockback_factor = 12.0
+				speed = 4800.0
+				knockback_factor = 20.0
 				_my_anims = _bat_anims
 		
 		var update_anims: Callable = func() -> void: 
