@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckerqmbq78g2y"]
+
+[ext_resource type="Texture2D" uid="uid://crgtculmdqml6" path="res://assets/sgq_ui/hud.png" id="1_k5mvo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvccm"]
+atlas = ExtResource("1_k5mvo")
+region = Rect2(32, 16, 16, 16)
+
+[node name="KeysIcon" type="TextureRect"]
+texture = SubResource("AtlasTexture_jvccm")
+expand_mode = 3

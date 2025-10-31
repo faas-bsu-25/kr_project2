@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://4lvf84pmxtsh"]
 
 [ext_resource type="Script" uid="uid://b1wsvem8dm5nv" path="res://scripts/enemy.gd" id="1_e0fji"]
-[ext_resource type="SpriteFrames" uid="uid://rropg02sll0k" path="res://resources/enemies-frames.tres" id="1_mo60x"]
+[ext_resource type="SpriteFrames" uid="uid://rropg02sll0k" path="res://resources/enemies_frames.tres" id="1_mo60x"]
 [ext_resource type="AudioStream" uid="uid://bbvrnyulpwwqo" path="res://assets/custom/enemy_death.wav" id="3_hog6v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e0fji"]

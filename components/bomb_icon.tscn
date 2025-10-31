@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://4jm0myk00h15"]
+
+[ext_resource type="Texture2D" uid="uid://crgtculmdqml6" path="res://assets/sgq_ui/hud.png" id="1_y46ny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts7ag"]
+atlas = ExtResource("1_y46ny")
+region = Rect2(16, 16, 16, 16)
+
+[node name="BombIcon" type="TextureRect"]
+texture = SubResource("AtlasTexture_ts7ag")
+expand_mode = 3

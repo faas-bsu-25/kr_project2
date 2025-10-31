@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4eufwc3kwpib"]
+[gd_scene load_steps=2 format=3 uid="uid://c4eufwc3kwpib"]
 
 [ext_resource type="Script" uid="uid://345bc0n3ho2t" path="res://scripts/game_hud.gd" id="1_2xjd5"]
-[ext_resource type="SpriteFrames" uid="uid://cmk0f1cg1h7kl" path="res://resources/pickup-frames.tres" id="2_ctak1"]
 
 [node name="GameHUD" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,55 +12,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2xjd5")
 
-[node name="BombsAndKeys" type="HSplitContainer" parent="."]
+[node name="BombsAndKeys" type="VSplitContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 49.0
-offset_top = -60.0
-offset_right = 129.0
-offset_bottom = -20.0
+offset_top = -92.0
+offset_right = 40.0
 grow_vertical = 0
-scale = Vector2(1.25, 1.25)
-dragging_enabled = false
-dragger_visibility = 1
+
+[node name="Bombs" type="HBoxContainer" parent="BombsAndKeys"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 3
 metadata/_edit_group_ = true
 
-[node name="Bombs" type="Control" parent="BombsAndKeys"]
+[node name="Keys" type="HBoxContainer" parent="BombsAndKeys"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 3
+metadata/_edit_group_ = true
 
-[node name="BombSprite" type="AnimatedSprite2D" parent="BombsAndKeys/Bombs"]
-position = Vector2(25, 0)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("2_ctak1")
-animation = &"bomb"
-autoplay = "bomb"
-frame_progress = 0.79030395
-
-[node name="BombsLabel" type="Label" parent="BombsAndKeys/Bombs"]
+[node name="Hearts" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
-text = "0"
-horizontal_alignment = 2
-
-[node name="Keys" type="Control" parent="BombsAndKeys"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="KeySprite" type="AnimatedSprite2D" parent="BombsAndKeys/Keys"]
-position = Vector2(25, 0)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("2_ctak1")
-animation = &"key"
-autoplay = "key"
-frame_progress = 0.6082485
-
-[node name="KeysLabel" type="Label" parent="BombsAndKeys/Keys"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "0"
-horizontal_alignment = 2
+offset_bottom = 40.0
