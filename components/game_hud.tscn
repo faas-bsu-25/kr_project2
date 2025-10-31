@@ -22,18 +22,13 @@ offset_right = 40.0
 grow_vertical = 0
 
 [node name="Bombs" type="HBoxContainer" parent="BombsAndKeys"]
-custom_minimum_size = Vector2(40, 40)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 metadata/_edit_group_ = true
 
 [node name="Keys" type="HBoxContainer" parent="BombsAndKeys"]
-custom_minimum_size = Vector2(40, 40)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 metadata/_edit_group_ = true
-
-[node name="Hearts" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

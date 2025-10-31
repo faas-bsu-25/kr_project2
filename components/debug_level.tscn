@@ -47,6 +47,7 @@ drops = Array[int]([1, 1])
 
 [node name="Chest" parent="Props" instance=ExtResource("12_wiafy")]
 position = Vector2(648, 168)
+loot = 4
 
 [node name="DoorTP" parent="Props" node_paths=PackedStringArray("linked_door") instance=ExtResource("11_k6hqe")]
 position = Vector2(456, 96)
@@ -106,9 +107,10 @@ pickup_type = 7
 position = Vector2(57, 61)
 has_pickup_delay = true
 
-[node name="Slime" parent="." instance=ExtResource("10_rfyb7")]
+[node name="Enemy" parent="." instance=ExtResource("10_rfyb7")]
 position = Vector2(1126, 311)
 preset = "Bat"
+drops = Array[int]([3, 6])
 health = 1
 speed = 3000.0
 knockback_factor = 12.0
@@ -119,3 +121,4 @@ position = Vector2(744, 309)
 [node name="Canvas" type="CanvasLayer" parent="."]
 
 [node name="GameHUD" parent="Canvas" instance=ExtResource("12_mqwui")]
+metadata/_edit_lock_ = true
