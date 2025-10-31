@@ -21,4 +21,4 @@ func _on_tp_area_body_entered(body: Node2D) -> void:
 		return
 	
 	if body is Player:
-		body.position = linked_door.position + (TP_OFFSET * Vector2.from_angle(self.rotation + deg_to_rad(90)))
+		body.position = linked_door.position + (TP_OFFSET * Vector2.from_angle(linked_door.rotation + deg_to_rad(90)))

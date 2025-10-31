@@ -4,5 +4,5 @@
 
 [node name="Torch" type="AnimatedSprite2D"]
 sprite_frames = ExtResource("1_d80np")
-animation = &"torch"
-autoplay = "torch"
+animation = &"torch_n"
+autoplay = "torch_n"

@@ -1,7 +1,0 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c4oe4xekd0csh"]
-
-[ext_resource type="FontFile" uid="uid://7yo7awd3jgko" path="res://assets/fonts/ARCADECLASSIC.TTF" id="1_fg5xm"]
-
-[resource]
-font = ExtResource("1_fg5xm")
-font_size = 24

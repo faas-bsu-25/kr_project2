@@ -36,12 +36,17 @@ tile_set = ExtResource("6_kqo2x")
 [node name="Props" type="TileMapLayer" parent="Tiles"]
 tile_set = ExtResource("7_oyd2g")
 
+[node name="Doors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
 [node name="Props" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Pickups" type="Node2D" parent="."]
-position = Vector2(364, 441)
+metadata/_edit_lock_ = true
 
 [node name="Enemies" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("8_wkcmx")]
 position = Vector2(744, 309)
