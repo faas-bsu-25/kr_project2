@@ -16,8 +16,20 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+
+### GitHub's VSCode Preset ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+
+
 ### Godot's Version Control ###
 /android/
+
 
 ### Custom ###
 test.html
