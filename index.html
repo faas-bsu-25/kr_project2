@@ -67,22 +67,16 @@
                         </p>
                     </div>
                     <div class="item">
-                        <a href="https://toadzillart.itch.io/Monster-pack" target="_blank">
-                            <img
-                                src="https://img.itch.zone/aW1nLzE1MzE3ODc0LmdpZg==/original/ZywAS6.gif"
-                                alt='"Super Gameboy Quest - Enemies pack" by Toadzillart on itch.io'
-                            />
-                        </a>
-                        <p>Not yet used. Essentially on standby.</p>
-                    </div>
-                    <div class="item">
                         <a href="https://toadzillart.itch.io/ui-pack" target="_blank">
                             <img
                                 src="https://img.itch.zone/aW1nLzE1MzE3ODgwLmdpZg==/original/KsyOhU.gif"
                                 alt='"Super Gameboy Quest - UI pack" by Toadzillart on itch.io'
                             />
                         </a>
-                        <p>Anticipating use once I begin UI work.</p>
+                        <p>
+                            Used for GUI/HUD assets! Most elements are atlased from the
+                            <code>game_ui/hud.png</code> file.
+                        </p>
                     </div>
                     <div class="item">
                         <a href="https://pixel-boy.itch.io/icon-godot-node" target="_blank">
@@ -97,6 +91,15 @@
                         </p>
                     </div>
                     <div class="item">
+                        <a href="https://www.1001fonts.com/7-12-serif-font.html">
+                            <img
+                                src="https://st.1001fonts.net/img/illustrations/7/-/7-12-serif-font-1-xl.avif"
+                                alt="7:12 Serif Fonts • 1001 Fonts"
+                            />
+                        </a>
+                        <p>The font seen in the game's GUI/HUD.</p>
+                    </div>
+                    <div class="item">
                         <a href="https://sfxr.me" target="_blank">
                             <img src="https://sfxr.me/logo.svg" alt="jsfxr" width="250rem" />
                         </a>
@@ -108,7 +111,7 @@
             <section class="links">
                 <h2>Useful Links</h2>
                 <div class="flex">
-                    <div class="links-container">
+                    <div class="links-container godot">
                         <h3>Godot Docs</h3>
                         <ul>
                             <li>
@@ -137,13 +140,6 @@
                                     href="https://docs.godotengine.org/en/latest/tutorials/animation/animation_tree.html"
                                     target="_blank"
                                     >Using AnimationTree</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html"
-                                    target="_blank"
-                                    >GDScript style guide</a
                                 >
                             </li>
                             <li>
@@ -190,19 +186,20 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="links-container">
+
+                    <div class="links-container other">
                         <h3>Other Sites</h3>
                         <ul>
                             <li>
                                 <img src="https://placehold.co/256x256/313244/cdd6f4/png?text=P" alt="Placehold.co" />
                                 <a href="https://placehold.co">Placehold</a><br />
-                                <span class="subtext">(used for color previews in Notes)</span>
+                                <p class="subtext">(used for color previews in Notes)</p>
                             </li>
                             <li>
                                 <img src="images/youtube.png" alt="YouTube" />
                                 <a href="https://www.youtube.com/watch?v=H_qn6A_RIFE">How to Use Scene Tiles in Godot</a
                                 ><br />
-                                <span class="subtext">(a short and sweet rundown on Scene Tiles and scripts)</span>
+                                <p class="subtext">(a short and sweet rundown on Scene Tiles and scripts)</p>
                             </li>
                             <li>
                                 <img
@@ -212,7 +209,16 @@
                                 <a href="https://catppuccin.com/palette" alt="catppuccin palette"
                                     >Catppuccin Palette [Mocha]</a
                                 ><br />
-                                <span class="subtext">(a color palette used to design the css for this page)</span>
+                                <p class="subtext">(a color palette used to design the css for this page)</p>
+                            </li>
+                            <li>
+                                <img src="https://www.1001fonts.com/favicon.ico" alt="1001 Fonts" />
+                                <a href="https://www.1001fonts.com/">1001 Fonts</a>
+                                <br />
+                                <p class="subtext">
+                                    (My go-to for finding downloadable fonts. There are other sites with the same fonts,
+                                    but so far, 1001 Fonts is my favorite.)
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -425,8 +431,8 @@
 
                 <article>
                     <details>
-                        <summary>
-                            The Enemy of my Enemy is my Code (10/28)
+                        <!-- Forgive the lack of formatting here. There's an extra space without doing this. -->
+                        <summary><span>The Enemy of my Enemy is my Code (10/28)</span>
                             <span class="subtext">And definitely not during class...</span>
                         </summary>
                         <blockquote>
@@ -490,6 +496,56 @@
                         </blockquote>
                     </details>
                 </article>
+
+                <article>
+                    <details>
+                        <summary>HUD + It's officially late! ⏰ (10/31)</summary>
+                        <blockquote>
+                            <p>
+                                <b>Happy Halloween!</b>
+                                <br />
+                                Allow me to address the elephant in the room. This assignment is now overdue. That's a
+                                fact. Dr. Faas did hint, as per his late policy, he might unofficially accept late work
+                                at full credit before Sunday. That said, this is but an excuse. I have no excuses,
+                                honestly, because there was a 9-day span where I didn't touch the project. How did this
+                                happen? Let's talk about it.
+                            </p>
+                            <p>
+                                Obviously I can expect no boss nor deadline as generous as Dr. Faas. In a professional
+                                environment, this simply would not do. To ensure that this doesn't happen again, I'm
+                                going forward with a few self-imposed guidelines:
+                            </p>
+                            <ol>
+                                <li>
+                                    <b>A task sheet.</b> I've been meaning to use those Smart Tables that Google Sheets
+                                    added awhile ago. This will help me keep tabs on my deadlines and create a sort of
+                                    regiment.
+                                </li>
+                                <li>
+                                    <b>A solid plan.</b> I'm pretty used to working spontaneously. This works well for
+                                    week-long or two-week-long projects, but after that it's anybody's guess. Combined
+                                    with the task sheet, this should help my keep tabs on how long I anticipate a task
+                                    taking.
+                                </li>
+                                <li>
+                                    <b>Notes on what I've learned!</b> Every mistake made now is a learning opportunity
+                                    to save the mistake later. I must--as in this journal--record my mistakes, how they
+                                    happen, and how I fixed them.
+                                </li>
+                            </ol>
+                            <p>Time will tell if this will work out. I'm hopeful.</p>
+                            <p>
+                                As for the GUI, I started using the Super Gameboy Quest GUI elements and they're really
+                                cute. This UI work with Containers and Control nodes reminds me a whole lot of
+                                SceneBuilder for JavaFX, so that's going pretty well.
+                            </p>
+                            <p>
+                                I'll have this done by the unofficial tentative date for sure. I would have liked to do
+                                more, but as earlier said I kind of did this to myself. A mistake to learn from!
+                            </p>
+                        </blockquote>
+                    </details>
+                </article>
             </section>
 
             <section class="notes">
@@ -522,12 +578,14 @@
                     <h3>Site Updates</h3>
                     <p>
                         If the site isn't reflecting commits in a new deployment, try refreshing the page manually. Even
-                        if the site has been closed since before the deployment
+                        if the site has been closed in your browser since before the deployment, it strangely might not
+                        show the changes until you manually refresh regardless.
                     </p>
                 </article>
 
                 <article class="always-do">
                     <h3>Things I always do when working in Godot</h3>
+
                     <ul>
                         <li>
                             I always have the following tabs open in my browser when working on a Godot project:
@@ -564,6 +622,7 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li>
                             When I create a project, I go into advanced debug settings and enable warnings relating to
                             <a
@@ -572,6 +631,7 @@
                                 >static typing</a
                             >.
                         </li>
+
                         <li>...</li>
                     </ul>
                 </article>
