@@ -30,6 +30,7 @@ code {
     padding: 0.33em;
 
     font-family: monospace;
+    font-size: 0.9em;
 
     background-color: var(--code-color);
     border-radius: 0.2em;
@@ -76,12 +77,19 @@ details {
     display: inline-block;
     cursor: pointer;
 }
+details.subtext {
+    max-width: 90%;;
+}
 
 summary {
     margin: 0.2em 0;
 
     font-size: 1.1rem;
     font-weight: 600;
+}
+details.subtext > summary {
+    font-size: 0.66rem;
+    font-weight: 500;
 }
 
 a {
@@ -128,6 +136,8 @@ section.links div.flex {
 .links-container img {
     width: 1.5rem;
     vertical-align: -0.4rem;
+
+    border-radius: 100%;
 }
 
 .subtext {
