@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://blqmiaat7hryk"]
 
 [ext_resource type="Script" uid="uid://c4lq3yaof04by" path="res://scripts/pickup.gd" id="1_1ftq6"]
-[ext_resource type="SpriteFrames" uid="uid://cmk0f1cg1h7kl" path="res://resources/pickup-frames.tres" id="2_1ftq6"]
+[ext_resource type="SpriteFrames" uid="uid://cmk0f1cg1h7kl" path="res://resources/pickup_frames.tres" id="2_1ftq6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ftq6"]
 

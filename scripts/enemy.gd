@@ -11,8 +11,6 @@ static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 
 @export_enum("Slime", "Bat") var preset: String = "Slime":
 	set(new_preset):
-		preset = new_preset
-		
 		match new_preset:
 			"Slime":
 				health = 3
