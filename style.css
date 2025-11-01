@@ -77,8 +77,9 @@ details {
     display: inline-block;
     cursor: pointer;
 }
+
 details.subtext {
-    max-width: 90%;;
+    max-width: 90%;
 }
 
 summary {
@@ -87,7 +88,8 @@ summary {
     font-size: 1.1rem;
     font-weight: 600;
 }
-details.subtext > summary {
+
+details.subtext>summary {
     font-size: 0.66rem;
     font-weight: 500;
 }
@@ -191,4 +193,4 @@ article.always-do>ul>li {
     section.links div.flex {
         flex-direction: column;
     }
-} 
+}
