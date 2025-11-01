@@ -35,7 +35,13 @@ func _process(_delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	TileEventBus.bomb_exploded.emit(body)
+	if body is CrackedBlock:
+		body.queue_free()
+	elif body is Pot:
+		body.shatter()
+		TileEventBus.tile_fired.emit(body)
+	elif body is Enemy:
+		body.change_to(Enemy.State.HIT)
 
 
 func _on_explosion_timer_timeout() -> void:

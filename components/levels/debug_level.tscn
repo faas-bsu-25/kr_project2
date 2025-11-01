@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=4 uid="uid://1htlfmrou215"]
+[gd_scene load_steps=10 format=4 uid="uid://1htlfmrou215"]
 
-[ext_resource type="PackedScene" uid="uid://dkp02if42mhss" path="res://components/level_base.tscn" id="1_0mkce"]
+[ext_resource type="PackedScene" uid="uid://dkp02if42mhss" path="res://components/levels/level_base.tscn" id="1_0mkce"]
 [ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/props/pot.tscn" id="1_8pany"]
 [ext_resource type="PackedScene" uid="uid://blqmiaat7hryk" path="res://components/pickup.tscn" id="2_8pany"]
 [ext_resource type="PackedScene" uid="uid://bg13jkbug35ic" path="res://components/props/locked_door.tscn" id="7_0bprn"]
+[ext_resource type="FontFile" uid="uid://deimg8gq2rgcj" path="res://assets/fonts/712_serif.ttf" id="8_w3rk7"]
 [ext_resource type="PackedScene" uid="uid://4lvf84pmxtsh" path="res://components/enemy.tscn" id="10_rfyb7"]
 [ext_resource type="PackedScene" uid="uid://dmnxmoyo7xp1m" path="res://components/props/door_tp.tscn" id="11_k6hqe"]
 [ext_resource type="PackedScene" uid="uid://cqdvy5wtgtirx" path="res://components/props/chest.tscn" id="12_wiafy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0bprn"]
+font = ExtResource("8_w3rk7")
+font_size = 32
+font_color = Color(0.47058824, 0.6431373, 0.41568628, 1)
 
 [node name="DebugLevel" instance=ExtResource("1_0mkce")]
 
@@ -98,3 +104,19 @@ drops = Array[int]([3, 6])
 health = 1
 speed = 3000.0
 knockback_factor = 12.0
+
+[node name="Label" type="Label" parent="." index="8"]
+anchors_preset = -1
+anchor_left = -0.44500002
+anchor_top = 0.47700003
+anchor_right = -0.44500002
+anchor_bottom = 0.47700003
+offset_left = 199.0
+offset_top = 648.0
+offset_right = 407.0
+offset_bottom = 699.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "That's it lol
+you win"
+label_settings = SubResource("LabelSettings_0bprn")

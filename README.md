@@ -1,6 +1,8 @@
 # `kr_project2`
 ###### Kat R. | CS 315: Game Programming
-The README has been migrated to the repository's GitHub Pages webpage, which can be found [here](https://faas-bsu-25.github.io/kr_project2/).
+
+> [!IMPORTANT]  
+> The README has been migrated to the repository's GitHub Pages webpage, which can be found [here](https://faas-bsu-25.github.io/kr_project2/).
 
 | Requirement | Fulfillment |
 | ----------- | ----------- |
@@ -9,8 +11,8 @@ The README has been migrated to the repository's GitHub Pages webpage, which can
 | Level Device 3 | Pot |
 | Access Collectible 1 | Bomb |
 | Access Collectible 2 | Key |
-| Level 1 | ... |
-| Level 2 | ... |
+| Level 1 | Debug Level |
+| Level 2 | Showcase Level |
 | Start Screen | ... |
 | NPC 1 | Slime (slower, less knockback, more health) |
 | NPC 2 | Bat (faster, more knockback, less health) |

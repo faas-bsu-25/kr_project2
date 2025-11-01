@@ -6,12 +6,9 @@ extends Node
 
 signal tile_fired(tile: Node)
 
-signal bomb_exploded(tile: Node)
-
 
 func _ready() -> void:
 	tile_fired.connect(_handle_tile)
-	bomb_exploded.connect(_handle_explosion)
 	pass
 
 
@@ -28,11 +25,3 @@ func _handle_tile(tile: Node) -> void:
 			tile.queue_free()
 		else:
 			$DoorLockedSound.play()
-
-
-func _handle_explosion(tile: Node) -> void:
-	if tile is CrackedBlock:
-		tile.queue_free()
-	elif tile is Pot:
-		tile.shatter()
-		_handle_tile(tile)
