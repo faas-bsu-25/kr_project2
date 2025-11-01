@@ -9,25 +9,7 @@ enum State { WAIT, CHASE, HIT }
 static var _slime_anims: Array[String] = ["slime_default", "slime_hit"]
 static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 
-@export_enum("Slime", "Bat") var preset: String = "Slime":
-	set(new_preset):
-		match new_preset:
-			"Slime":
-				health = 3
-				speed = 1200.0
-				knockback_factor = 8.0
-				_my_anims = _slime_anims
-			"Bat":
-				health = 1
-				speed = 4800.0
-				knockback_factor = 20.0
-				_my_anims = _bat_anims
-		
-		var update_anims: Callable = func() -> void: 
-			Sprite.animation = _my_anims[0]
-			Sprite.play()
-		
-		update_anims.call_deferred()
+@export_enum("Slime", "Bat") var preset: String = "Slime"
 
 @export_group("Drops")
 @export var drops: Array[Pickup.Type] = [Pickup.Type.HALF_HEART]
@@ -41,6 +23,7 @@ static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 
 var target: Player
 var _my_anims: Array[String] = _slime_anims
+var _preset_last_checked: String = preset
 
 @onready var Sprite: AnimatedSprite2D = $Sprite
 
@@ -50,6 +33,10 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if (_preset_last_checked != preset):
+		_preset_last_checked = preset
+		_apply_preset()
+	
 	if Engine.is_editor_hint(): return
 	
 	if target == null and state == State.CHASE:
@@ -84,6 +71,34 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 		target = null
 
 
+func _on_sprite_animation_finished() -> void:
+	if Sprite.animation == _my_anims[1]:
+		if health <= 0:
+			_die()
+		
+		change_to(State.WAIT)
+		Sprite.animation = _my_anims[0]
+		Sprite.play()
+
+
+func _on_death_sound_finished() -> void:
+	self.queue_free()
+
+
+func _apply_preset() -> void:
+	match preset:
+		"Slime":
+			health = 3
+			speed = 1200.0
+			knockback_factor = 8.0
+			_my_anims = _slime_anims
+		"Bat":
+			health = 1
+			speed = 4800.0
+			knockback_factor = 20.0
+			_my_anims = _bat_anims
+
+
 func change_to(new_state: State) -> void:
 	self.state = new_state
 	
@@ -96,16 +111,6 @@ func change_to(new_state: State) -> void:
 			Sprite.animation = _my_anims[1]
 			Sprite.play()
 			health -= 1
-
-
-func _on_sprite_animation_finished() -> void:
-	if Sprite.animation == _my_anims[1]:
-		if health <= 0:
-			_die()
-		
-		change_to(State.WAIT)
-		Sprite.animation = _my_anims[0]
-		Sprite.play()
 
 
 func _die() -> void:
@@ -121,7 +126,3 @@ func _die() -> void:
 		add_sibling.call_deferred(dropped_pickup)
 	
 	$DeathSound.play()
-
-
-func _on_death_sound_finished() -> void:
-	self.queue_free()
