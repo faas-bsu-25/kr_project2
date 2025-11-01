@@ -617,7 +617,65 @@
                                 suppose we shall see.
                             </p>
                             <p>
-                                The main branch will have a release soon. That will be the source of the project submission.
+                                The main branch will have a release soon. That will be the source of the project
+                                submission.
+                            </p>
+                        </blockquote>
+                    </details>
+                </article>
+
+                <article>
+                    <details>
+                        <summary>A final farewell, for now</summary>
+                        <blockquote>
+                            <p>
+                                Tool scripts were a nightmare after adding the main menu, which can change scenes during
+                                runtime. This
+                                <a
+                                    href="https://github.com/faas-bsu-25/kr_project2/commit/72210b0f83b8468da866520a1d87e67086e64b29"
+                                    target="_blank"
+                                    >commit</a
+                                >
+                                summary pretty much sums it up:
+                            </p>
+                            <blockquote>
+                                <p>
+                                    The only surefire way to edit a given object's children in realtime based on a
+                                    pre-existing export value of the given object...
+                                </p>
+                                <ol>
+                                    <li>is NOT to modify directly in a tool setter function...</li>
+                                    <li>
+                                        ...EVEN IF using <code>call_deferred()</code> (because changing scenes during
+                                        runtime will still call the issue.)..
+                                    </li>
+                                    <li>
+                                        ...therefore, <b><ins>IS</ins></b> to run a check in the
+                                        <code>_process()</code> function and extract setter code to a custom internal
+                                        function. The simplest answer is usually the best, huh? Oh, and you should still
+                                        keep the <code>@tool</code> annotation because that will let the object process
+                                        in the editor.
+                                    </li>
+                                </ol>
+                            </blockquote>
+                            <p>
+                                The game is now feature-complete, as far as the rubric goes. But I must say, it doesn't
+                                feel very glorious.
+                            </p>
+                            <p>
+                                In some ways, I triumphed. My eureka moment was the pickup types that change in
+                                realtime. I learned how to use AnimationTree state machines. I learned inheritance. I
+                                learned a lot.
+                            </p>
+                            <p>
+                                In some ways, I admit defeat. That weird 9-day period sealed my coffin, I think. My
+                                fixation on toolscript setters was far more trouble than it was worth, cool as it was. I
+                                never implemented a player health system. Some of the pickups from the asset pack are
+                                unfinished.
+                            </p>
+                            <p>
+                                Most importantly, though...I learned to make a game. Cliche as it sounds, I really think
+                                it's the truth.
                             </p>
                         </blockquote>
                     </details>
