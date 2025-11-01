@@ -4,6 +4,8 @@
 > [!IMPORTANT]  
 > The README has been migrated to the repository's GitHub Pages webpage, which can be found [here](https://faas-bsu-25.github.io/kr_project2/).
 
+
+## Fulfilled Requirements
 | Requirement | Fulfillment |
 | ----------- | ----------- |
 | Level Device 1 | Cracked Block |
@@ -13,7 +15,7 @@
 | Access Collectible 2 | Key |
 | Level 1 | Debug Level |
 | Level 2 | Showcase Level |
-| Start Screen | ... |
+| Start Screen | Main Menu |
 | NPC 1 | Slime (slower, less knockback, more health) |
 | NPC 2 | Bat (faster, more knockback, less health) |
 | Sound | `res://assets/custom/*` |
