@@ -6,6 +6,11 @@ const DEBUG_LEVEL_SCENE: PackedScene = preload("res://components/levels/debug_le
 const SHOWCASE_LEVEL_SCENE: PackedScene = preload("res://components/levels/showcase_level.tscn")
 
 
+func _ready() -> void:
+	PickupEventBus.bombs = 0
+	PickupEventBus.keys = 0
+
+
 func _on_debug_button_up() -> void:
 	get_tree().change_scene_to_packed(DEBUG_LEVEL_SCENE)
 

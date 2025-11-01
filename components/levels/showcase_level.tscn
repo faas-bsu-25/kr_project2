@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ctr7ssgjtfmda"]
+[gd_scene load_steps=7 format=4 uid="uid://ctr7ssgjtfmda"]
 
 [ext_resource type="PackedScene" uid="uid://dkp02if42mhss" path="res://components/levels/level_base.tscn" id="1_wnvf7"]
 [ext_resource type="PackedScene" uid="uid://dmnxmoyo7xp1m" path="res://components/props/door_tp.tscn" id="2_rpogi"]
@@ -6,12 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cqdvy5wtgtirx" path="res://components/props/chest.tscn" id="4_uq18y"]
 [ext_resource type="PackedScene" uid="uid://chcxn2f7kc824" path="res://components/props/pot.tscn" id="5_by28l"]
 [ext_resource type="PackedScene" uid="uid://4lvf84pmxtsh" path="res://components/enemy.tscn" id="6_r1smk"]
-[ext_resource type="FontFile" uid="uid://deimg8gq2rgcj" path="res://assets/fonts/712_serif.ttf" id="7_wktk2"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_upaod"]
-font = ExtResource("7_wktk2")
-font_size = 32
-font_color = Color(0.47058824, 0.6431373, 0.41568628, 1)
 
 [node name="ShowcaseLevel" instance=ExtResource("1_wnvf7")]
 
@@ -155,18 +149,5 @@ health = 1
 speed = 4800.0
 knockback_factor = 20.0
 
-[node name="Label" type="Label" parent="." index="8"]
-anchors_preset = -1
-anchor_left = -0.44500002
-anchor_top = 0.47700003
-anchor_right = -0.44500002
-anchor_bottom = 0.47700003
-offset_left = -600.0
-offset_top = 283.0
-offset_right = -392.0
-offset_bottom = 334.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "That's it lol
-you win"
-label_settings = SubResource("LabelSettings_upaod")
+[node name="WinArea" parent="." index="5"]
+position = Vector2(-711, 311)

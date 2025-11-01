@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://oxfiajtjjbvp"]
+
+[ext_resource type="Script" uid="uid://ckpomfg6qs0rd" path="res://scripts/win_area.gd" id="1_lc7x4"]
+[ext_resource type="FontFile" uid="uid://deimg8gq2rgcj" path="res://assets/fonts/712_serif.ttf" id="1_wkndv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lc7x4"]
+font = ExtResource("1_wkndv")
+font_size = 32
+font_color = Color(0.47058824, 0.6431373, 0.41568628, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_32vr6"]
+font = ExtResource("1_wkndv")
+font_color = Color(0.83137256, 0.8235294, 0.60784316, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32vr6"]
+size = Vector2(309, 63)
+
+[node name="WinArea" type="Area2D"]
+script = ExtResource("1_lc7x4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -33.5
+offset_right = 156.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "That's it lol
+you win"
+label_settings = SubResource("LabelSettings_lc7x4")
+
+[node name="Hint" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "(Step here to return to the main menu.)"
+label_settings = SubResource("LabelSettings_32vr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 2.5)
+shape = SubResource("RectangleShape2D_32vr6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

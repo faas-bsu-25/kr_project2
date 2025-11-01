@@ -9,7 +9,11 @@ enum State { WAIT, CHASE, HIT }
 static var _slime_anims: Array[String] = ["slime_default", "slime_hit"]
 static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 
-@export_enum("Slime", "Bat") var preset: String = "Slime"
+@export_enum("Slime", "Bat") var preset: String = "Slime":
+	set(new_preset):
+		preset = new_preset
+		_I_need_to_change_presets = true
+@export_tool_button("Reapply Preset", "Redo") var reapply_preset: Callable = _apply_preset
 
 @export_group("Drops")
 @export var drops: Array[Pickup.Type] = [Pickup.Type.HALF_HEART]
@@ -23,7 +27,7 @@ static var _bat_anims: Array[String] = ["bat_default", "bat_hit"]
 
 var target: Player
 var _my_anims: Array[String] = _slime_anims
-var _preset_last_checked: String = preset
+var _I_need_to_change_presets: bool = false
 
 @onready var Sprite: AnimatedSprite2D = $Sprite
 
@@ -33,8 +37,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if (_preset_last_checked != preset):
-		_preset_last_checked = preset
+	if _I_need_to_change_presets:
 		_apply_preset()
 	
 	if Engine.is_editor_hint(): return
@@ -86,6 +89,8 @@ func _on_death_sound_finished() -> void:
 
 
 func _apply_preset() -> void:
+	_I_need_to_change_presets = false
+	
 	match preset:
 		"Slime":
 			health = 3
@@ -97,7 +102,11 @@ func _apply_preset() -> void:
 			speed = 4800.0
 			knockback_factor = 20.0
 			_my_anims = _bat_anims
-
+	
+	Sprite.animation = _my_anims[0]
+	change_to(State.WAIT)
+	Sprite.play()
+	
 
 func change_to(new_state: State) -> void:
 	self.state = new_state
